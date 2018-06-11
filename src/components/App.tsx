@@ -1,17 +1,21 @@
 import * as React from 'react';
 
+require('./App.scss')
+
 interface AppProps {
-    message: string,
+    message?: string,
 };
 
 class App extends React.Component<AppProps, {}>{
-    constructor(props: AppProps) {
-        super(props);
-    }
 
     public static defaultProps: Partial<AppProps> = {
         message: "None"
     };
+
+    constructor(props: AppProps) {
+        super(props);
+    }
+    
 
     render(){
         return(
@@ -22,4 +26,4 @@ class App extends React.Component<AppProps, {}>{
 
 
 
-export = App
+export default App

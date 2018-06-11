@@ -1,11 +1,19 @@
 const path = require('path');
 const webpack = require('webpack');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+function getEntrySources(sources) {
+  if (process.env.NODE_ENV !== 'production') {
+      sources.push('webpack-dev-server/client?http://localhost:8080');
+      sources.push('webpack/hot/only-dev-server');
+  }
+
+  return sources;
+}
+
+
 module.exports = {
-  entry: [
-    'webpack-dev-server/client?http://localhost:8080',
-    'webpack/hot/only-dev-server',
-    './src/index.tsx'
-  ],
+  entry: getEntrySources(['./src/index.tsx']),
   watch: true,
   devtool: 'source-map', 
   output: {
@@ -26,7 +34,25 @@ module.exports = {
     {
       test: /\.(ts|tsx)$/,
       loader: "awesome-typescript-loader"
-    }]
+    },
+    {
+      test: /\.scss$/,
+      use: [
+        "style-loader",
+        "css-loader",
+        {
+          loader: "sass-loader",
+          options:{
+            data: `@import "variables";`,
+            includePaths:[
+              path.resolve(__dirname, "src")
+            ]
+          }
+        }
+
+      ]
+   } 
+  ]
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin()

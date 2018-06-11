@@ -3,7 +3,7 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import * as TestUtils from 'react-dom/test-utils';
 
-const App = require("./App");
+import App from "./App";
 
 it("App meet user", ()=>{
 
@@ -18,6 +18,7 @@ it("App meet user", ()=>{
 })
 
 it("App meet nameless user", ()=>{
+  
   const appnow:any = TestUtils.renderIntoDocument(
     <App  />
   );
