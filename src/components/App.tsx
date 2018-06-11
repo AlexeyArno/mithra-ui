@@ -4,6 +4,22 @@ interface AppProps {
     message: string,
 };
 
-export default function({ message }: AppProps ) {
-    return <h1>Hello228 {message}</h1>;
-};
+class App extends React.Component<AppProps, {}>{
+    constructor(props: AppProps) {
+        super(props);
+    }
+
+    public static defaultProps: Partial<AppProps> = {
+        message: "None"
+    };
+
+    render(){
+        return(
+            <h1>Hello {this.props.message}</h1>
+        )
+    }
+}
+
+
+
+export = App
