@@ -1,6 +1,5 @@
 const path = require('path');
 const webpack = require('webpack');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 function getEntrySources(sources) {
   if (process.env.NODE_ENV !== 'production') {
@@ -22,6 +21,9 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.json', '.ts', '.tsx'],
+    alias:{
+      src: path.resolve('./src')
+    }
   },
   module: {
     rules:[{

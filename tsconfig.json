@@ -1,8 +1,12 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es2015",
      "module": "commonjs",
      "sourceMap": true,
-     "jsx": "react"
+     "jsx": "react",
+     "baseUrl": "./",
+     "paths": {
+         "src": ["./src"]
+      }
   }
 }

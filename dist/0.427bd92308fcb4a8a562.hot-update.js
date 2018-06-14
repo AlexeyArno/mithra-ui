@@ -1,0 +1,1 @@
+webpackHotUpdate(0,[function(o,e,l){"use strict";console.log("Hello World!!!")}]);
