@@ -35,7 +35,9 @@
     "webpack-dev-server": "^3.1.4"
   },
   "dependencies": {
+    "@types/immutable": "^3.8.7",
     "@types/redux-immutable-state-invariant": "^2.0.4",
+    "immutable": "^3.8.2",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "react-redux": "^5.0.7",

@@ -1,22 +1,15 @@
 import * as React from 'react';
+import {WidgetTable} from './widget/widget-table/WidgetTable'
 
 require('./App.scss')
 
-interface AppProps {
-    message?: string,
-};
-
-class App extends React.Component<AppProps, {}>{
-
-    constructor(props: AppProps) {
-        super(props);
-    }
-    
-    render(){
-        return(
-            <h1>Hello {this.props.message}</h1>
-        )
-    }
+const App =() =>{
+  return(
+    <div>
+      <h1>Best Table</h1>
+      <WidgetTable/>
+    </div>
+  )
 }
 
 export default App

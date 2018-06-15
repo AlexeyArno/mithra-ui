@@ -1,15 +1,15 @@
 import * as React from 'react';
 import { render } from 'react-dom';
-// import App from './components/App';
+import App from './components/App';
 import { Provider } from 'react-redux'
 
 import {AppStore} from './store/app-store'
-import {WidgetTable} from './components/widget/widget-table-container/WidgetTable'
+
 
 render(
     // <App message="World" />,
     <Provider store={AppStore}>
-        <WidgetTable/>
+        <App/>
     </Provider>,
     document.getElementById('root'),
 );

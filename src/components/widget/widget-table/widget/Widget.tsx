@@ -1,11 +1,12 @@
 import * as React from 'react';
 import {Widget} from 'src/models/widget'
+import * as Immutable from 'immutable';
 
 require('./Widget.scss')
 
 interface WidgetProps {
     refreshWidgets: Function;
-    widgets: Widget[];
+    widgets: Immutable.List<Widget>;
 };
 
 
@@ -13,7 +14,7 @@ interface WidgetProps {
 class WidgetComponent extends React.Component<WidgetProps, void>{
 
     public static defaultProps: Partial<WidgetProps> = {
-        widgets: []
+        widgets: Immutable.List([])
     };
 
     constructor(props: WidgetProps) {

@@ -22,7 +22,7 @@ const createRefreshWidgetsDoneAction:(widgets: Array<Widget>) => WidgetAction =
 export const refreshWidgets=()=>{
   return (dispatch, getState)=>{
     dispatch(createRefreshWidgetsRequstAction());
-    let promise = new Promise(resolve=>setTimeout(resolve, 100))
+    let promise = new Promise(resolve=>setTimeout(resolve, 3000))
     promise.then(()=>{
         let wids:Array<Widget> = []
         for(let i=0;i<10;i++){
