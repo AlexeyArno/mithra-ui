@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from 'react'
 import {Widget} from 'src/models/widget'
 import * as Immutable from 'immutable';
 
@@ -23,6 +23,7 @@ class WidgetComponent extends React.Component<WidgetProps, void>{
     
 
     public render(){
+      console.log("Hello2")
         return(
           <table>
             <thead>

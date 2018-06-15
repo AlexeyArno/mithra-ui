@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+var ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 function getEntrySources(sources) {
   if (process.env.NODE_ENV !== 'production') {
@@ -13,12 +14,11 @@ function getEntrySources(sources) {
 
 module.exports = {
   entry: getEntrySources(['./src/index.tsx']),
-  watch: true,
-  devtool: 'source-map', 
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
   },
+  cache:true,
   resolve: {
     extensions: ['.js', '.json', '.ts', '.tsx'],
     alias:{
@@ -26,16 +26,18 @@ module.exports = {
     }
   },
   module: {
-    rules:[{
-      test: /\.js$/,
-      exclude: /node_modules/,
-      use:[{
-        loader: 'babel-loader'
-      }]
-    },
+    rules:[
     {
       test: /\.(ts|tsx)$/,
-      loader: "awesome-typescript-loader"
+      include: path.resolve(__dirname, 'src'),
+      use:[
+        {
+          loader: "ts-loader",
+          options: {
+            transpileOnly: true
+          }
+        }
+      ]
     },
     {
       test: /\.scss$/,
@@ -51,16 +53,17 @@ module.exports = {
             ]
           }
         }
-
       ]
    } 
   ]
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new ForkTsCheckerWebpackPlugin()
   ],
   devServer: {
     port: 8080,
     contentBase: (__dirname, './dist'),
+    compress: true
   }
 };
