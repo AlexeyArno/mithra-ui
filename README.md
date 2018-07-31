@@ -1,1 +1,1 @@
-# client-frontend
+# Client SPA for Uniture
