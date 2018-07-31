@@ -11,7 +11,7 @@ interface WidgetProps {
 
 
 
-class WidgetComponent extends React.Component<WidgetProps, void>{
+class WidgetComponent extends React.Component<WidgetProps, {}>{
 
     public static defaultProps: Partial<WidgetProps> = {
         widgets: Immutable.List([])
@@ -23,7 +23,6 @@ class WidgetComponent extends React.Component<WidgetProps, void>{
     
 
     public render(){
-      console.log("Hello2")
         return(
           <table>
             <thead>
