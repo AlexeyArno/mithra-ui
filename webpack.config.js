@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 var ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+// const LoaderOptionsPlugin = require("webpack/lib/LoaderOptionsPlugin");
 
 function getEntrySources(sources) {
   if (process.env.NODE_ENV !== 'production') {
@@ -27,6 +28,12 @@ module.exports = {
   },
   module: {
     rules:[
+      {
+        enforce: 'pre',
+        test: /\.tsx?$/,
+        loader: 'tslint-loader',
+        exclude: /(node_modules)/,
+    },
     {
       test: /\.(ts|tsx)$/,
       include: path.resolve(__dirname, 'src'),
@@ -60,6 +67,7 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new ForkTsCheckerWebpackPlugin()
+    
   ],
   devServer: {
     port: 8080,
