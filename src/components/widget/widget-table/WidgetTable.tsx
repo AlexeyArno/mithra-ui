@@ -13,7 +13,7 @@ import AppState from 'src/store/app-state'
 require('./WidgetTable.scss')
 
 const mapStateToProps = (state:AppState) =>({
-  widgets: state.widgets,
+  widgets: state.widgets
 })
 
 const mapDispatchToProps = dispatch =>
