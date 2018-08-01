@@ -3,4 +3,6 @@ dist/bundle.js
 .cache-loader/
 *.lock
 *.log
+.vscode/
+*.souce
 stats.json
