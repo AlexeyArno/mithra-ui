@@ -4,5 +4,4 @@ dist/bundle.js
 *.lock
 *.log
 .vscode/
-*.souce
 stats.json
