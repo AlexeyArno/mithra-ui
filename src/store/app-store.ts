@@ -2,8 +2,9 @@ import * as React from "react"
 import {applyMiddleware, createStore, Store, combineReducers} from "redux"
 import thunk from "redux-thunk"
 
-import {widgetReducer} from '../reducers/widget-reducer'
+import {reducers} from 'src/reducers/rootReducer'
 import AppState from './app-state'
+import {defaultState} from './app-defState'
 
 
 // export let GetStore=(history: any)=>{
@@ -20,5 +21,5 @@ import AppState from './app-state'
 //   return store
 // }
 
-export const AppStore:Store<AppState> = 
-  createStore(widgetReducer, applyMiddleware(thunk))
+export let AppStore:any = 
+  createStore(reducers, defaultState, applyMiddleware(thunk))

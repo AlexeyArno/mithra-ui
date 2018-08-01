@@ -12,9 +12,11 @@ import AppState from 'src/store/app-state'
 
 require('./WidgetTable.scss')
 
-const mapStateToProps = (state:AppState) =>({
-  widgets: state.widgets
-})
+const mapStateToProps = (state:any) =>{
+  return {
+    widgets:  state.widgetReducer.widgets
+  }
+}
 
 const mapDispatchToProps = dispatch =>
   bindActionCreators({refreshWidgets}, dispatch);
