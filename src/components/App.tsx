@@ -1,15 +1,17 @@
 import * as React from 'react';
 import {WidgetTable} from './widget/widget-table/WidgetTable'
 import { Link } from 'react-router-dom'
+import NavBar from './NavBar/NavBar'
 
 require('./App.scss')
 
-const App =() =>{
+const App = () =>{
   return(
     <div>
-      <h1>Best Table</h1>
-      <WidgetTable/>
-      <Link to='/auth'>Auth</Link>
+      
+      {/* <WidgetTable/> */}
+      {/* <Link to='/auth'>Auth</Link> */}
+      <NavBar/>
     </div>
   )
 }
