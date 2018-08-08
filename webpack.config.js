@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 var ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 // const LoaderOptionsPlugin = require("webpack/lib/LoaderOptionsPlugin");
 
 function getEntrySources(sources) {
@@ -23,7 +24,8 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.json', '.ts', '.tsx'],
     alias:{
-      src: path.resolve('./src')
+      src: path.resolve('./src'),
+      assets:  path.resolve('./assets')
     }
   },
   module: {
@@ -36,7 +38,7 @@ module.exports = {
     },
     {
       test: /\.(ts|tsx)$/,
-      include: path.resolve(__dirname, 'src'),
+      // include: path.resolve(__dirname, 'src'),
       use:[
         {
           loader: "ts-loader",
@@ -46,6 +48,10 @@ module.exports = {
         }
       ]
     },
+    {
+      test: /\.svg$/,
+      loader: 'svg-inline-loader'
+  },
     {
       test: /\.scss$/,
       use: [
@@ -65,6 +71,7 @@ module.exports = {
   ]
   },
   plugins: [
+    // new TsconfigPathsPlugin({ configFile: "./tsconfig.json"}),
     new webpack.HotModuleReplacementPlugin(),
     new ForkTsCheckerWebpackPlugin()
     
