@@ -25,7 +25,6 @@ class Router extends React.Component<RouterComponentProps, {}>{
       <Route path={ob.path} exact component={(props) => <Provider store={this.props.store}>{ob.component}</Provider>} key={key}/>
     )
     pathesRendered.push(<Route key={pathways.length} component={() => <h1>Page not found</h1>}/>)
-    console.log(pathesRendered)
     return(
       <BrowserRouter>
         <div>
