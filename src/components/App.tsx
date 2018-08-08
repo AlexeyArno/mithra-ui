@@ -10,17 +10,9 @@ require('./App.scss')
 const App = () =>{
   return(
     <div>
-<<<<<<< HEAD
-      
       {/* <WidgetTable/> */}
       {/* <Link to='/auth'>Auth</Link> */}
       <NavBar/>
-=======
-      <h1>Best Table</h1>
-      <div dangerouslySetInnerHTML={{ __html: logo }} />
-      <TestRedux/>
-      <Link to='/auth'>Auth</Link>
->>>>>>> master
     </div>
   )
 }
