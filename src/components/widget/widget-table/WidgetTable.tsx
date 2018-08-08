@@ -1,10 +1,8 @@
-import * as React from "react";
 import {connect} from "react-redux";
 import {bindActionCreators} from "redux"
 
 import {refreshWidgets} from "src/actions/refresh-widgets"
 import WidgetComponent from './widget/Widget'
-import AppState from 'src/store/app-state'
 
 // import {Widget} from 'src/models/widget'
 

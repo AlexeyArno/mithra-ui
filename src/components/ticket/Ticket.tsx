@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {Widget} from 'src/models/widget'
+import {Widget} from "src/models/widget"
 import * as Immutable from 'immutable';
 
 require('./Widget.scss')

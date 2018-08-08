@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {Widget} from 'src/models/widget'
+import {Widget} from '__src__/models/widget'
 import {connect} from "react-redux";
 import {bindActionCreators} from "redux"
 
