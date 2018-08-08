@@ -1,5 +1,4 @@
 import * as React from 'react';
-// import {WidgetTable} from './widget/widget-table/WidgetTable'
 import {TestRedux} from './test-redux-component/TestComponent'
 import { Link } from 'react-router-dom'
 
