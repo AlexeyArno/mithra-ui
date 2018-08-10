@@ -1,5 +1,4 @@
 import * as React from 'react';
-import {TestRedux} from './test-redux-component/TestComponent'
 import { Link } from 'react-router-dom'
 import NavBar from './NavBar/NavBar'
 
@@ -10,8 +9,6 @@ require('./App.scss')
 const App = () =>{
   return(
     <div>
-      {/* <WidgetTable/> */}
-      {/* <Link to='/auth'>Auth</Link> */}
       <NavBar/>
     </div>
   )
