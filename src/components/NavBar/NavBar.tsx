@@ -6,15 +6,16 @@ import FollowersBtn from './FollowersBtn/FollowersBtn'
 import MsgBtn from './MsgBtn/MsgBtn'
 import SearchBtn from './SearchBtn/SearchBtn'
 import SettingsBtn from './SettingsBtn/SettingsBtn'
-import ArrBtn from './ArrBtn/ArrBtn'
+import {ArrBtn} from './ArrBtn/ArrBtn'
+import {connect} from "react-redux";
 
 require('./NavBar.scss')
 
-class NavBar extends React.Component<{}, {}>{
+class NavBarComponent extends React.Component<{}, {}>{
     constructor(props) {
         super(props);
     }
-    
+
     render(){
         return(
             <div className="ContainerBtn">
@@ -41,4 +42,13 @@ class NavBar extends React.Component<{}, {}>{
     }
 }
 
-export default NavBar
+const mapStateToProps = (state:any) =>{
+    return {
+      open:state.leftBarStateReducer.leftBarIsOpen
+    }
+}
+
+export const NavBar = 
+    connect(mapStateToProps, {})(NavBarComponent)
+
+// export default NavBar

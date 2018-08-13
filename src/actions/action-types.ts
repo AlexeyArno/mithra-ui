@@ -1,1 +1,4 @@
-export enum actionTypes{}
+export enum actionTypes{
+    CHANGE_STATE_LEFT_BAR_DONE,
+    CHANGE_STATE_LEFT_BAR_REQUEST
+}
