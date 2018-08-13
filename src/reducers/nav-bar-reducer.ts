@@ -6,13 +6,12 @@ import {defaultState} from '../store/app-defState'
 import {LeftBarStateChangeAction} from '../actions/left-bar';
 import * as Immutable from 'immutable';
 
-
 export const leftBarStateReducer:Reducer<AppState> = 
 (state:AppState = defaultState, action:LeftBarStateChangeAction)=>{
   switch(action.type){
-    case actionTypes.CHANGE_STATE_LEFT_BAR_DONE:
-      state.leftBarIsOpen=!state.leftBarIsOpen
-      return state;
+    case actionTypes.CHANGE_STATE_LEFT_BAR:
+      console.log("Reducer ",state)
+      return Object.assign({}, state,{leftBarIsOpen:!state.leftBarIsOpen});
     default:
       return state 
   }

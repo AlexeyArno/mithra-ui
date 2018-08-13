@@ -8,18 +8,26 @@ import SearchBtn from './SearchBtn/SearchBtn'
 import SettingsBtn from './SettingsBtn/SettingsBtn'
 import {ArrBtn} from './ArrBtn/ArrBtn'
 import {connect} from "react-redux";
+import {bindActionCreators} from "redux"
+import { withRouter } from 'react-router'
 
 require('./NavBar.scss')
 
-class NavBarComponent extends React.Component<{}, {}>{
+interface NavBarComponentProps{
+  open: any
+}
+
+class NavBarComponent extends React.Component<NavBarComponentProps, {}>{
     constructor(props) {
         super(props);
     }
 
+
     render(){
+      console.log("open - ", this.props.open)
         return(
             <div className="ContainerBtn">
-
+                {this.props.open?"Open": "Close"}
                 <div className="UserProf">
                     <User/>
                     <BtnUser/>
@@ -42,13 +50,17 @@ class NavBarComponent extends React.Component<{}, {}>{
     }
 }
 
-const mapStateToProps = (state:any) =>{
+const mapStateToProps = (state:any, ownProps:any) =>{
+  console.log(state.leftBarStateReducer)
     return {
-      open:state.leftBarStateReducer.leftBarIsOpen
+      open: state.leftBarStateReducer.leftBarIsOpen,
+      ...ownProps
     }
 }
 
-export const NavBar = 
-    connect(mapStateToProps, {})(NavBarComponent)
+const mapDispatchToProps = dispatch =>
+  bindActionCreators({}, dispatch);
+
+export const NavBar = connect(mapStateToProps, mapDispatchToProps)(NavBarComponent)
 
 // export default NavBar
