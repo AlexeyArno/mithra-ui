@@ -2,17 +2,20 @@
   width: 96px;
   height: 100%;
   background-color:#F9F9F9;
+  transition: 1s
 }
 
 .ContainerBtnActive{
-  width: 280px;
+  width: 270px;
   min-height: 100%;
   background-color:#F9F9F9;
+  transition: 1s
 }
 
 .UserProf{
   height: 25%;
-  padding-top:25px; 
+  padding-top:25px;
+  
 }
 
 .NavBtn{
@@ -21,9 +24,11 @@
   -khtml-user-select: none;
   -webkit-user-select: none;
   height: 65%;
+  
 }
 
 .BackBtn{
   height: 10%;
+  
 }
 

@@ -6,11 +6,11 @@ import UserAvatar from "./user-avatar/UserAvatar"
 
 require("./userInfo.scss")
 
-// interface userInfoComponentProps{
-//   open: any
-// }
+interface userInfoComponentProps{
+  open: any
+}
 
-class userInfoComponent extends React.Component<{}, {}>{
+class userInfoComponent extends React.Component<userInfoComponentProps, {}>{
   constructor(props) {
     super(props);
   }

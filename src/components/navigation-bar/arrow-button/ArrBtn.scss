@@ -7,10 +7,29 @@
     margin-right: auto;
     border-left:3px solid;
     color: rgba(89, 91, 210, 0);
+    transition: 1s
 }
 
 .ArrBtn:hover{
     path{ 
         fill: #595BD2;
     }
+}
+
+.ArrBtnActive:hover{
+  path{ 
+      fill: #595BD2;
+  }
+}
+
+.ArrBtnActive{
+  transform: scale(-1, 1);
+  height: 50px;
+  width: 90px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  border-left:3px solid;
+  color: rgba(89, 91, 210, 0);
+  transition: 1s
 }

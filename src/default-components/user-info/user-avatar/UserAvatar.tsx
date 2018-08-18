@@ -3,20 +3,20 @@ import {connect} from "react-redux";
 import {bindActionCreators} from "redux"
 import { withRouter } from 'react-router'
 
-require('./UserAvatar.scss')
+require('./UserName.scss')
 
-interface userAvatarComponentProps{
+interface UserNameComponentProps{
   open: any
 }
 
-class UserAvatar extends React.Component<userAvatarComponentProps, {}>{
+class UserAvatar extends React.Component<UserNameComponentProps, {}>{
   constructor(props) {
     super(props);
   }
 
   render(){
     return(
-        <div  className="userAvatarStyle">
+        <div  className="UserAvatarStyle">
 
         </div>
     )

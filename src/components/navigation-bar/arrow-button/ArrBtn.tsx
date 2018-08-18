@@ -24,7 +24,7 @@ class ArrBtnComponent extends React.Component<ArrBtnComp, {}>{
 
   render(){
     return(
-      <div className="ArrBtn" onClick={this.click}>
+      <div className={(this.props.open==true)? "ArrBtnActive":"ArrBtn"} onClick={this.click}>
         <ArrbtnPic/>    
       </div>
     )
