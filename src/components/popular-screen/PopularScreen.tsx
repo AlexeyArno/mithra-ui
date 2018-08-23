@@ -3,13 +3,18 @@ import { Link } from 'react-router-dom'
 
 require('./PopularScreen.scss')
 
-const PopularScreen = () => {
-  return(
-    <div>
-      
-      
-    </div>
-  )
+class PopularScreen extends React.Component<{}> {
+  constructor(props){
+    super(props)
+  }
+
+  render(){
+    return(
+      <div className="PopularScreenContaineMain">
+        
+      </div>
+    )
+  }  
 }
 
 export default PopularScreen

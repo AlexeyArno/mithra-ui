@@ -1,5 +1,5 @@
 import * as React from 'react'
-import User from './User/User'
+import {UserInfo} from './user-info/UserInfo'
 import {UserButton} from "./user-button/UserButton"
 import {TrendButton} from './trend-button/TrendButton'
 import {FollowersButton} from './followers-button/FollowersButton'
@@ -27,7 +27,7 @@ class NavBarComponent extends React.Component<NavBarComponentProps, {}>{
       <div  className={(this.props.open==false)? "ContainerBtn":"ContainerBtnActive" }>
 
         <div className="UserProf">
-          <User/>
+          <UserInfo/>
           <UserButton/>
         </div>
 
@@ -49,11 +49,10 @@ class NavBarComponent extends React.Component<NavBarComponentProps, {}>{
 }
 
 const mapStateToProps = (state:any, ownProps:any) =>{
-//   console.log(state.leftBarStateReducer)
-    return {
-      open: state.leftBarStateReducer.leftBarIsOpen,
-      ...ownProps
-    }
+  return {
+    open: state.leftBarStateReducer.leftBarIsOpen,
+    ...ownProps
+  }
 }
 
 const mapDispatchToProps = dispatch =>
