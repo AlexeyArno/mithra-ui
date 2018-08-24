@@ -1,9 +1,16 @@
-.PopularScreenContaineMain{
-  width: 100%;
+.PopularScreenContainerMain{
+  min-width: 1824px;
   height: 100vh;
-  margin-top: 3vh;
-  margin-left:3vh;
-  margin-right: 3vh;
-  margin-bottom: 3vh;
-  background-color:aqua; 
+  background-color:aqua;
+  display: inline-block;
+}
+
+.PopularScreenContainerContent{
+  min-width: 1600px;
+  height: 900px;
+  margin: auto;
+  margin: 20px;
+  margin-top:30px;
+
+  background-color:white;
 }
