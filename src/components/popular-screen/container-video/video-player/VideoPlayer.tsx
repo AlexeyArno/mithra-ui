@@ -1,20 +1,20 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom'
 
-require('./DescriptionVideo.scss')
+require('./VideoPlayer.scss')
 
-class DescriptionVideo extends React.Component<{}> {
+class VideoPlayer extends React.Component<{}> {
   constructor(props){
     super(props)
   }
 
   render(){
     return(
-      <div className="DescriptionVideoStyle">
+      <div className="VideoPlayerStyle">
         
       </div>
     )
   }  
 }
 
-export default DescriptionVideo
+export default VideoPlayer
