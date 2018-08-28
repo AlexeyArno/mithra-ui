@@ -11,7 +11,7 @@ class ThemeVideo extends React.Component<{}> {
   render(){
     return(
       <div className="ThemeVideoStyle">
-        
+        Make 3d great again
       </div>
     )
   }  

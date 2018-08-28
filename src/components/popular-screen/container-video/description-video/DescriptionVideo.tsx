@@ -11,7 +11,7 @@ class DescriptionVideo extends React.Component<{}> {
   render(){
     return(
       <div className="DescriptionVideoStyle">
-        
+        Make some shit for cs go and other garbage games
       </div>
     )
   }  

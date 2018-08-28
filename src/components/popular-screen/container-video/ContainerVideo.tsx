@@ -2,6 +2,8 @@ import * as React from 'react';
 import { Link } from 'react-router-dom'
 import VideoPlayer from "./video-player/VideoPlayer"
 import UserInfoStreamer from "./user-info-streamer/UserInfoStreamer"
+import DescriptionVideo from "src/components/popular-screen/container-video/description-video/DescriptionVideo"
+import ThemeVideo from "./theme-video/ThemeVideo"
 require('./ContainerVideo.scss')
 
 class ContainerVideo extends React.Component<{}> {
@@ -14,11 +16,13 @@ class ContainerVideo extends React.Component<{}> {
       <div className="ContainerVideoStyle">
         <div className="ContainerVideoLeft">
           <VideoPlayer/>
-          <UserInfoStreamer/>
+          
         </div>
 
         <div className="ContainerVideoRight">
-          
+          <UserInfoStreamer/>
+          <ThemeVideo/>
+          <DescriptionVideo/>
         </div>
       </div>
     )
