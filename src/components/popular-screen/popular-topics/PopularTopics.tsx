@@ -5,13 +5,13 @@ require('./PopularTopics.scss')
 
 class PopularTopics extends React.Component{
     
-    render(){
-        return(
-            <div className="PopularTopicStyle">
+  render(){
+    return(
+      <div className="PopularTopicStyle">
 
-            </div>    
-        )
-    }
+      </div>    
+    )
+  }
 }
 
 export default PopularTopics
