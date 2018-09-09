@@ -1,0 +1,19 @@
+.ContentTopicsDescriptionStyle{
+  height: 20px;
+  width: 300px;
+  display: flex;
+  flex-direction: row;
+  padding-top:10px;
+}
+
+.ContentTopicsDescriptionStyle_right{
+  height: 20px;
+  width: 150px;
+  text-align: right;
+}
+
+.ContentTopicsDescriptionStyle_left{
+  height: 20px;
+  width: 150px;
+  text-align: left;
+}

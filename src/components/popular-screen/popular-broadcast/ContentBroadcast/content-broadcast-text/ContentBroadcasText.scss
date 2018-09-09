@@ -1,0 +1,43 @@
+.ContentBroadcasTextStyle{
+  height: 65px;
+  width: 100%;
+  display: inline-block;
+}
+
+.ContentBroadcasTextStyle_FirstRow{
+  height: 25px;
+  width: 310px;
+  padding-top: 20px; 
+}
+
+.ContentBroadcasTextStyle_FirstRow_Text{
+  height: 25px;
+  width: 310px;
+  font-size: 12pt;
+  padding-left:10px; 
+}
+
+.ContentBroadcasTextStyle_FirstSecond{
+  height: 40px;
+  width: 100%;
+}
+
+.ContentBroadcasTextStyle_SecondRow{
+  display: flex;
+  flex-direction: row;
+  padding-top: 8px; 
+}
+
+.ContentBroadcasTextStyle_SecondRow_TextRight{
+  font-size: 9pt;
+  text-align: right;
+  width: 155px;
+  padding-right:10px;
+}
+
+.ContentBroadcasTextStyle_SecondRow_TextLeft{
+  font-size: 9pt;
+  width: 155px;
+  text-align: left;
+  padding-left:10px; 
+}
