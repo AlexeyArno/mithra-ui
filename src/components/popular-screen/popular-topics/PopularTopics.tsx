@@ -10,13 +10,17 @@ class PopularTopics extends React.Component{
     return(
       <div className="PopularTopicStyle">
         <PopularTopicsTopBar/>
+      
+          <div className="ContentTopics_list">
+            <ContentTopics/>
+            <ContentTopics/>
+            <ContentTopics/>
+          </div>
 
-        <div className="ContentTopics_list">
-          <ContentTopics/>
-          <ContentTopics/>
-          <ContentTopics/>
-        </div>
-      </div>    
+          <div className="button-scroll">
+          sdds
+          </div>
+        </div> 
     )
   }
 }

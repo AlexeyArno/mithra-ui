@@ -16,7 +16,7 @@ class PopularBroadcast extends React.Component<{}>{
         <div className="ContentBroadcast_list">
           <ContentBroadcast/>
           <ContentBroadcast/>
-          
+          <ContentBroadcast/>
         </div>
       </div>  
     )

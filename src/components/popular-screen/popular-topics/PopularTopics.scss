@@ -6,4 +6,15 @@
 .ContentTopics_list{
   display: flex;
   flex-direction: row;
+  overflow: hidden;
+  margin-left:-17px;
+  // overflow: auto;
 }
+
+.button-scroll{
+  width: 30px;
+  height:30px;
+  border-radius: 50%;
+  
+}
+
