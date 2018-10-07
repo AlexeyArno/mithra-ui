@@ -8,9 +8,11 @@ class ContentTopics extends React.Component{
     
   render(){
     return(
-      <div className="ContentTopicsStyle">
-        <ContentTopicsPicture/>
-        <ContentTopicsDescription/>
+      <div className="wrapper_for_ContentTopicsStyle">
+        <div className="ContentTopicsStyle">
+          <ContentTopicsPicture/>
+          <ContentTopicsDescription/>
+        </div>
       </div> 
     )
   }
