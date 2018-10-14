@@ -9,9 +9,10 @@ class DescriptionVideo extends React.Component<{}> {
   }
 
   render(){
+    let txt="Make some shit for cs go and other garbage games. Make some shit for cs go and other garbage games. Make some shit for cs go and other garbage games"
     return(
       <div className="DescriptionVideoStyle">
-        Make some shit for cs go and other garbage games
+        {txt}
       </div>
     )
   }  

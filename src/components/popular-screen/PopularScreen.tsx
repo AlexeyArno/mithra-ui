@@ -16,11 +16,11 @@ class PopularScreen extends React.Component<{}> {
       <div className="PopularScreenContainerMain">
         <div className="PopularScreenContent">
           <div className="PopularScreenContentLeft">
-            <div className="PopularScreenVideoDescription">
+            <div className="PopularScreenVideoDescriptionLeft">
               <ContainerVideo/>
             </div>
 
-            <div className="PopularScreenPopularTopics">
+            <div className="PopularScreenPopularTopicsLeft">
               {/* <PopularTopicsTopBar/> */}
               <PopularTopics/>
             </div>

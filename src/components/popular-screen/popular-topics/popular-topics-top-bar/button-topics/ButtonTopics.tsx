@@ -5,11 +5,12 @@ require('./ButtonTopics.scss')
 
 class ButtonTopics extends React.Component{
   render(){
+    let txt="Open All Topics"
     return(
       <div className="ButtonTopicsStyle">
-        <a className="ButtonTopics_text">
-          Open All Topics
-        </a>
+        <div className="ButtonTopics_text">
+          {txt}
+        </div>
       </div>    
     )
   }

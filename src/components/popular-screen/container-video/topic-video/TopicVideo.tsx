@@ -9,10 +9,11 @@ class TopicVideo extends React.Component<{}> {
   }
 
   render(){
+    let txt="design"
     return(
-      <div className="TopicVideoStyle">
-        design
-      </div>
+        <div className="TopicVideoStyle">
+          {txt}
+        </div>
     )
   }  
 }
