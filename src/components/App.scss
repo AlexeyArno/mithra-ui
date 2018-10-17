@@ -16,3 +16,10 @@ body, html {
   display: flex;
   flex-direction: row;
 }
+
+.ContentContainer{
+  // max-width: calc(100wv - 50px) !important;
+  max-width: calc(100% - 50px);
+  margin:auto;
+  margin-top: 0px;
+}
