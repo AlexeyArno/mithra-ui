@@ -19,11 +19,9 @@ class UserMainInfoComponent extends React.Component<UserMainInfoProps, {}>{
 
   render(){
     return(
-      <div className="UserMainInfoWrapper">
-        <div className="UserMainInfo" >
-          <UserName/>
-          <UserProfession/>
-        </div>
+      <div className="UserMainInfo">
+        <UserName/>
+        <UserProfession/>
       </div>
     )
   }

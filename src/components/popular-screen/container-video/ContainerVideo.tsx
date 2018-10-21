@@ -15,16 +15,15 @@ class ContainerVideo extends React.Component<{}> {
   render(){
     return(
       <div className="ContainerVideoStyle">
-        <div className="ContainerVideoLeft">
-          <VideoPlayer/>
-          
-        </div>
+        <VideoPlayer/>
 
         <div className="ContainerVideoRight">
-          <UserInfoStreamer/>
-          <ThemeVideo/>
-          <DescriptionVideo/>
-          <PanelWithNumberViewers/>
+          {/* <div className="ContainerVideoRight_under"> */}
+            <UserInfoStreamer/>
+            <ThemeVideo/>
+            <DescriptionVideo/>
+            <PanelWithNumberViewers/>
+          {/* </div> */}
         </div>
       </div>
     )

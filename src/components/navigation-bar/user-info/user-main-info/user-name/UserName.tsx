@@ -15,9 +15,10 @@ class UserNameComponent extends React.Component<UserNameProps, {}>{
   }
 
   render(){
+    let name="Spider Man"
     return(
       <div  className="UserNameStyle" >
-        Spider Man
+        {name}
       </div>
     )
   }

@@ -34,7 +34,7 @@ class NavBarComponent extends React.Component<NavBarComponentProps, {}>{
         <div className="NavBtn">
           <TrendButton/>
           <FollowersButton/>
-          <MessageButton/>
+          {/* <MessageButton/> */}
           <SearchButton/>
           <SettingsButton/>
         </div>

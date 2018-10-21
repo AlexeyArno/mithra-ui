@@ -15,9 +15,10 @@ class UserProfessionComponent extends React.Component<UserProfessionProps, {}>{
   }
 
   render(){
+    let prof="designer"
     return(
       <div  className="UserProfessionStyle">
-        designer
+        {prof}
       </div>
     )
   }
