@@ -8,20 +8,24 @@ class ContentBroadcasText extends React.Component<{}>{
   }
 
   render(){
+    let NameVideo="Make Eminem great again"
+    let viewers = "13,345"
+    let Author = "VJlink228"
+    let prof = "math"
     return(
       <div className="ContentBroadcasTextStyle">
         <div className="ContentBroadcasTextStyle_FirstRow">
           <div className="ContentBroadcasTextStyle_FirstRow_Text">
-            Make Eminem great again
+            {NameVideo}
           </div>
         </div>
         
         <div className="ContentBroadcasTextStyle_SecondRow">
           <div className="ContentBroadcasTextStyle_SecondRow_TextLeft">
-            13,345 viewers on VJlink228
+            {viewers} viewers on {Author}
           </div>
           <div className="ContentBroadcasTextStyle_SecondRow_TextRight">
-            Design
+            {prof}
           </div>
         </div>
 
