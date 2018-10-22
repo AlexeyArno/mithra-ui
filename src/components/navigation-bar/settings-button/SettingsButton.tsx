@@ -1,7 +1,5 @@
 import * as React from 'react'
 import SettingsBtnPic from './SettingsBtnPic/SettingsBtnPic'
-import {connect} from "react-redux";
-import {bindActionCreators} from "redux"
 import { withRouter } from 'react-router'
 
 require('./SettingsButton.scss')

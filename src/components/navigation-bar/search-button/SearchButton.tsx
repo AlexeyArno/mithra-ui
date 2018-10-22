@@ -1,7 +1,5 @@
 import * as React from 'react'
 import SearchBtnPic from './SearchBtnPic/SearchBtnPic'
-import {connect} from "react-redux";
-import {bindActionCreators} from "redux"
 import { withRouter } from 'react-router'
 
 require('./SearchButton.scss')
