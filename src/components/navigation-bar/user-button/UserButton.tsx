@@ -15,8 +15,10 @@ class UserButtonComponent extends React.Component<UserButtonComponentProps, {}>{
     
   render(){
     return(
-      <div className={(this.props.open==true)? "BtnUser1Active":"BtnUser1"}>
-        {(this.props.open==true)? <p className="TextUserBtn">Options</p>:""}      
+      <div className="WrapperForBtn">
+        <div className={(this.props.open)? "BtnUser1Active":"BtnUser1"}>
+          {(this.props.open)? "Options":""}      
+        </div>
       </div>
     )
   }

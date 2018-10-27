@@ -1,0 +1,37 @@
+.AuthWindow{
+  width: 260px;
+  height: 450px;
+  margin:auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.SignUpBtn{
+  font-family: 'Segoe UI';
+  font-size: 15px;
+  // font-weight: regular;
+  // margin: auto;
+  display: flex;
+  align-items: center;
+  color: #595BD2;
+  cursor: pointer;margin:auto;
+}
+
+.SignInBtn{
+  font-family: 'Segoe UI';
+  font-size: 15px;
+  // font-weight: regular;
+  // margin: auto;
+  display: flex;
+  align-items: center;
+  color: #595BD2;
+  cursor: pointer;
+  margin:auto;
+}
+
+.SingBtns{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}

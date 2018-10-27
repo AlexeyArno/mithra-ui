@@ -14,7 +14,10 @@
 
 .UserProf{
   height: 25%;
-  margin-top:25px;
+  padding-top: 40px; 
+  display: block;
+  // flex-direction: column;
+  margin: auto;
 }
 
 .NavBtn{
@@ -24,6 +27,7 @@
   -webkit-user-select: none;
   text-align: center;
   height: 62%;
+  
 }
 
 .BackBtn{

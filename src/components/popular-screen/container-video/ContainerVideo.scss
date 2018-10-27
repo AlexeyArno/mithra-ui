@@ -22,12 +22,12 @@
 
 @media screen and (max-width:1240px){
   .ContainerVideoRight{
-    display:none;
+    // display:none;
   }
 
   .VideoPlayerStyle{
-    // width
     width: calc(100vw - 155px);
+    // width: calc(100vw - 130px);
   }
 }
 

@@ -28,7 +28,7 @@ class NavBarComponent extends React.Component<NavBarComponentProps, {}>{
 
         <div className="UserProf">
           <UserInfo/>
-          <UserButton/>
+          {/* <UserButton/> */}
         </div>
 
         <div className="NavBtn">
