@@ -18,8 +18,8 @@ body, html {
 }
 
 .ContentContainer{
+  // max-width: calc(100wv - 50px) !important;
   max-width: calc(100% - 50px);
-  // margin:auto;
-  // margin: 3%;
-  // margin-top: 0px;
+  margin:auto;
+  margin-top: 0px;
 }

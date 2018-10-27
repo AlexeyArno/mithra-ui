@@ -1,45 +1,37 @@
 import * as React from 'react'
 import ArrbtnPic from './ArrBtnPic/ArrbtnPic'
-import {connect} from "react-redux";
-import {bindActionCreators} from "redux"
+// import {connect} from "react-redux";
+// import {bindActionCreators} from "redux"
 import {changeLeftBarState} from 'src/actions/left-bar'
 import {withRouter} from 'react-router-dom'
+
+import RootStore from 'src/store'
+import { observer, inject } from 'mobx-react'
 
 require('./ArrBtn.scss')
 
 interface ArrBtnComp {
-  changeLeftBarState:Function,
-  open:boolean
+  store?: RootStore
 }
 
-class ArrBtnComponent extends React.Component<ArrBtnComp, {}>{
+@inject('store')
+@observer
+export class ArrBtn extends React.Component<ArrBtnComp, {}>{
   constructor(props) {
     super(props);
     this.click = this.click.bind(this)
   }
 
   click(){
-    this.props.changeLeftBarState()
+    this.props.store.appStore.changeLeftBar()
   } 
 
   render(){
     return(
-      <div className={(this.props.open==true)? "ArrBtnActive":"ArrBtn"} onClick={this.click}>
+      <div className={(this.props.store.appStore.leftBarState)? "ArrBtnActive":"ArrBtn"} onClick={this.click}>
         <ArrbtnPic/>    
       </div>
     )
   }
 }
-const mapStateToProps = (state:any, ownProps:any) =>{
-//   console.log(state.leftBarStateReducer)
-  return {
-    open: state.leftBarStateReducer.leftBarIsOpen,
-    ...ownProps
-  }
-}
-
-const mapDispatchToProps = dispatch =>
-  bindActionCreators({changeLeftBarState}, dispatch);
-  
-export const ArrBtn = connect(mapStateToProps, mapDispatchToProps)(ArrBtnComponent)
 

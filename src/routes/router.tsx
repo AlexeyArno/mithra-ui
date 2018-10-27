@@ -1,7 +1,8 @@
 import * as React from "react";
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import { Provider  } from 'react-redux';
+// import { Provider  } from 'react-redux';
+import { Provider } from 'mobx-react'
 
 interface RouterComponentProps {
   pathways: Array<{path:string, component: JSX.Element}>;

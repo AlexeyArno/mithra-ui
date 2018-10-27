@@ -1,42 +1,44 @@
 import * as React from 'react'
-import {UserInfo} from './user-info/UserInfo'
-import {UserButton} from "./user-button/UserButton"
-import {TrendButton} from './trend-button/TrendButton'
-import {FollowersButton} from './followers-button/FollowersButton'
-import {MessageButton} from './message-button/MessageButton'
-import {SearchButton} from './search-button/SearchButton'
-import {SettingsButton} from './settings-button/SettingsButton'
+// import {UserInfo} from './user-info/UserInfo'
+// import {UserButton} from "./user-button/UserButton"
+// import {TrendButton} from './trend-button/TrendButton'
+// import {FollowersButton} from './followers-button/FollowersButton'
+// import {MessageButton} from './message-button/MessageButton'
+// import {SearchButton} from './search-button/SearchButton'
+// import {SettingsButton} from './settings-button/SettingsButton'
 import {ArrBtn} from './arrow-button/ArrBtn'
-import {connect} from "react-redux"
-import {bindActionCreators} from "redux"
-import { withRouter } from 'react-router'
+
+import RootStore from 'src/store'
+import { observer, inject } from 'mobx-react'
 
 require('./NavigationBar.scss')
 
 interface NavBarComponentProps{
-  open: any
+  store?:RootStore
 }
 
-class NavBarComponent extends React.Component<NavBarComponentProps, {}>{
+@inject('store')
+@observer
+export default class NavBar extends React.Component<NavBarComponentProps, {}>{
   constructor(props) {
     super(props);
   }
 
   render(){
     return(
-      <div  className={(this.props.open==false)? "ContainerBtn":"ContainerBtnActive" }>
+      <div  className={(!this.props.store.appStore.leftBarState) ? "ContainerBtn":"ContainerBtnActive" }>
 
         <div className="UserProf">
-          <UserInfo/>
-          {/* <UserButton/> */}
+          {/* <UserInfo/>
+          <UserButton/> */}
         </div>
 
         <div className="NavBtn">
-          <TrendButton/>
+          {/* <TrendButton/>
           <FollowersButton/>
-          {/* <MessageButton/> */}
+          {/* <MessageButton/>
           <SearchButton/>
-          <SettingsButton/>
+          <SettingsButton/> */}
         </div>
 
         <div className="BackBtn">
@@ -47,16 +49,3 @@ class NavBarComponent extends React.Component<NavBarComponentProps, {}>{
     )
   }
 }
-
-const mapStateToProps = (state:any, ownProps:any) =>{
-  return {
-    open: state.leftBarStateReducer.leftBarIsOpen,
-    ...ownProps
-  }
-}
-
-const mapDispatchToProps = dispatch =>
-  bindActionCreators({}, dispatch);
-
-export const NavBar = connect(mapStateToProps, mapDispatchToProps)(NavBarComponent)
-

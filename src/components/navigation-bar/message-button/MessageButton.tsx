@@ -1,7 +1,5 @@
 import * as React from 'react'
 import MsgBtnPic from './MsgBtnPic/MsgBtnPic'
-import {connect} from "react-redux"
-import {bindActionCreators} from "redux"
 import { withRouter } from 'react-router'
 
 require('./MessageButton.scss')

@@ -1,17 +1,20 @@
 import * as React from 'react'
 import {UserAvatar} from "src/default-components/user-avatar/UserAvatar"
-import {connect} from "react-redux"
 import {UserMainInfo} from "./user-main-info/UserMainInfo"
-import {bindActionCreators} from "redux"
 import { withRouter } from 'react-router'
+
+import RootStore from 'src/store'
+import { observer, inject } from 'mobx-react'
 
 require('./UserInfo.scss')
 
 interface UserInfoProps{
-  open: any
+  store?: RootStore
 }
 
-class UserInfoComponent extends React.Component<UserInfoProps, {}>{
+@inject('store')
+@observer
+export class UserInfo extends React.Component<UserInfoProps, {}>{
   constructor(props) {
     super(props);
   }
@@ -19,25 +22,14 @@ class UserInfoComponent extends React.Component<UserInfoProps, {}>{
   render(){
     
     return(
-      <div  className={(this.props.open==false)? "UserInfo":"UserInfoActive" }>
+      <div  className={(!this.props.store.appStore.leftBarState)? "UserInfo":"UserInfoActive" }>
       
-        <UserAvatar/> 
-        {(this.props.open==true)? <UserMainInfo/>:""} 
+        <UserAvatar open={this.props.store.appStore.leftBarState}/> 
+
+        {(this.props.store.appStore.leftBarState)? <UserMainInfo/>:""} 
 
       </div>
     )
   }
 }
 
-const mapStateToProps = (state:any, ownProps:any) =>{
-//   console.log(state.leftBarStateReducer)
-    return {
-      open: state.leftBarStateReducer.leftBarIsOpen,
-      ...ownProps
-    }
-}
-
-const mapDispatchToProps = dispatch =>
-  bindActionCreators({}, dispatch);
-
-export const UserInfo = connect(mapStateToProps, mapDispatchToProps)(UserInfoComponent)
