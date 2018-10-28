@@ -5,7 +5,7 @@ import { IRootStore } from 'src/store/interfeces';
 import { Provider } from 'mobx-react'
 
 import SignUpScreen from "./sign_up-screen/SignUpScreen"
-const logo = require("assets/heart.svg")
+const abc = require("assets/back.png")
 
 import Store from 'src/store'
 
@@ -18,8 +18,9 @@ class App extends React.Component<{},{}> {
       return (
         <Provider store={this.store}>
           <div className="ScreenOne">
-            <NavBar/>
-            <SignUpScreen/>
+            {/* <NavBar/> */}
+            {/* <SignUpScreen/> */}
+            <img src={abc} />
             {/* <PopularScreen/> */}
           </div>
         </Provider>

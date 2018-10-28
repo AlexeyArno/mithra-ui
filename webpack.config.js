@@ -51,7 +51,7 @@ module.exports = {
     {
       test: /\.svg$/,
       loader: 'svg-inline-loader'
-  },
+    },
     {
       test: /\.scss$/,
       use: [
@@ -67,7 +67,26 @@ module.exports = {
           }
         }
       ]
-   } 
+    },{
+      test: /\.(png|jpe?g)$/,
+      use: [
+        'file-loader',
+        {
+          loader: 'image-webpack-loader',
+          options: {
+            bypassOnDebug:true,
+            mozjpeg: {
+              progressive: true,
+              quality: 65
+            },
+            pngquant: {
+              quality: '65-90',
+              speed: 4
+            },
+          }
+        },
+      ]
+    } 
   ]
   },
   plugins: [
