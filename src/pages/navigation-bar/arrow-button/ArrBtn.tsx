@@ -1,37 +1,30 @@
-import * as React from 'react'
-import ArrbtnPic from './ArrBtnPic/ArrbtnPic'
-// import {connect} from "react-redux";
-// import {bindActionCreators} from "redux"
-import {changeLeftBarState} from 'src/actions/left-bar'
-import {withRouter} from 'react-router-dom'
+import * as React from "react";
+import ArrBtnPic from "./ArrBtnPic";
+import { observer, inject } from "mobx-react";
 
-import RootStore from 'src/store'
-import { observer, inject } from 'mobx-react'
+require("./ArrBtn.scss");
 
-require('./ArrBtn.scss')
-
-interface ArrBtnComp {
-  store?: RootStore
+interface IArrBtnComp {
+  store?: {appStore: {leftBarState: boolean, changeLeftBar: () => void} };
 }
 
-@inject('store')
+@inject("store")
 @observer
-export class ArrBtn extends React.Component<ArrBtnComp, {}>{
+export class ArrBtn extends React.Component<IArrBtnComp, {}> {
   constructor(props) {
     super(props);
-    this.click = this.click.bind(this)
+    this.click = this.click.bind(this);
   }
 
-  click(){
-    this.props.store.appStore.changeLeftBar()
-  } 
+  public click() {
+    this.props.store.appStore.changeLeftBar();
+  }
 
-  render(){
+  public render() {
     return(
-      <div className={(this.props.store.appStore.leftBarState)? "ArrBtnActive":"ArrBtn"} onClick={this.click}>
-        <ArrbtnPic/>    
+      <div className={(this.props.store.appStore.leftBarState) ? "ArrBtnActive" : "ArrBtn"} onClick={this.click}>
+        <ArrBtnPic/>
       </div>
-    )
+    );
   }
 }
-

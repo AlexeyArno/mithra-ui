@@ -2,11 +2,17 @@ body{
   margin: 0px;
 }
 
+.contentWrapper{
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+}
+
 .coupleWrapper{
+  overflow: hidden;
   display: flex;
   width: 100vw;
   height: 100vh;
-  flex:0 0 200px;
 }
 
 .coupleWrapper:nth-child(1){

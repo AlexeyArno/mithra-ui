@@ -1,0 +1,8 @@
+TODO:
+  + Architecture discover
+
+  + Make some little change in design 
+
+  Add test
+
+  Make adaptive for [hd, full hd]

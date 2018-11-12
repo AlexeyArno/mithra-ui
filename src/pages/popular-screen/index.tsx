@@ -13,7 +13,7 @@ class PopularScreen extends React.Component<{}> {
 
   public render() {
     return(
-      <div className="ContentContainer PopularScreenContainerMain ">
+      <div className="contentWrapper PopularScreenContainerMain ">
         <div className="PopularScreenContent">
           <div className="PopularScreenContentLeft">
             <div className="PopularScreenVideoDescriptionLeft">
