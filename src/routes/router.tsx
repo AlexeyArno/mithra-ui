@@ -21,6 +21,7 @@ class Router extends React.Component<RouterComponentProps, {}>{
 
   public render(){
     let {pathways} = this.props
+    console.log(this.props.store)
     let pathesRendered: Array<JSX.Element> =
       pathways.map((ob: {path:string, component:JSX.Element}, key)=>
       <Route path={ob.path} exact component={(props) => <Provider store={this.props.store}>{ob.component}</Provider>} key={key}/>

@@ -25,6 +25,7 @@ export default class NavBar extends React.Component<NavBarComponentProps, {}>{
   }
 
   render(){
+    console.log(this.props.store)
     return(
       <div  className={(!this.props.store.appStore.leftBarState) ? "ContainerBtn":"ContainerBtnActive" }>
 

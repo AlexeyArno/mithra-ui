@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Link } from 'react-router-dom'
 import PopularTopicsTopBar from "./popular-topics-top-bar/PopularTopicsTopBar"
 import ContentTopics from "./content-topics/ContentTopics"
-import ArrBtnPic from "src/components/navigation-bar/arrow-button/ArrBtnPic/ArrBtnPic"
+import ArrBtnPic from "src/pages/navigation-bar/arrow-button/ArrBtnPic/ArrBtnPic"
 require('./PopularTopics.scss')
 
 const ThemeWidth = 340;
