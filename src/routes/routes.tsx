@@ -1,8 +1,11 @@
-import PopularScreen from '../pages/popular-screen'
-import * as React from 'react'
+import PopularScreen from "../pages/popular-screen";
+import NavigationBar from "../pages/navigation-bar";
 
-const routes: Array<{path:string, component: JSX.Element}> = [
-  {path: "/", component: <PopularScreen/>},
-]
+import * as React from "react";
 
-export default routes
+const routes: Array<{path: string, component: JSX.Element}> = [
+  {path: "/", component: <div className="coupleWrapper"> <NavigationBar/><PopularScreen/></div>},
+  // {path: "/", component: <div className="coupleWrapper"> <NavigationBar/><div className="content"/></div>},
+];
+
+export default routes;

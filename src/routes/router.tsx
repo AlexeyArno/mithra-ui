@@ -1,32 +1,39 @@
 import * as React from "react";
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-// import { Provider  } from 'react-redux';
-import { Provider } from 'mobx-react'
+import { Provider } from "mobx-react";
 
-interface RouterComponentProps {
-  pathways: Array<{path:string, component: JSX.Element}>;
-  store: any
+interface IRouterComponentProps {
+  pathways: Array<{path: string, component: JSX.Element}>;
+  store: any;
+}
+
+const Page = (component: JSX.Element, store: any) => {
+  return  () => <Provider store={store}>{component}</Provider>;
 };
+const Page404 = () => <h1>Page not found</h1>;
 
-class Router extends React.Component<RouterComponentProps, {}>{
+class Router extends React.Component<IRouterComponentProps, {}> {
 
-  public static defaultProps: Partial<RouterComponentProps> = {
-    pathways: []
+  public static defaultProps: Partial<IRouterComponentProps> = {
+    pathways: [],
   };
 
-  constructor(props: RouterComponentProps) {
+  constructor(props: IRouterComponentProps) {
       super(props);
   }
 
-  public render(){
-    let {pathways} = this.props
-    console.log(this.props.store)
-    let pathesRendered: Array<JSX.Element> =
-      pathways.map((ob: {path:string, component:JSX.Element}, key)=>
-      <Route path={ob.path} exact component={(props) => <Provider store={this.props.store}>{ob.component}</Provider>} key={key}/>
-    )
-    pathesRendered.push(<Route key={pathways.length} component={() => <h1>Page not found</h1>}/>)
+  public render() {
+    const {pathways} = this.props;
+    const pathesRendered: JSX.Element[] =
+      pathways.map((ob: {path: string, component: JSX.Element}, key) =>
+        <Route
+         path={ob.path}
+         exact={true}
+         key={key}
+         component={Page(ob.component, this.props.store)}
+        />);
+    pathesRendered.push(<Route key={pathways.length} component={Page404}/>);
     return(
       <BrowserRouter>
         <div>
@@ -35,9 +42,8 @@ class Router extends React.Component<RouterComponentProps, {}>{
           </Switch>
         </div>
       </BrowserRouter>
-    )
+    );
   }
-
 }
 
-export default Router
+export default Router;

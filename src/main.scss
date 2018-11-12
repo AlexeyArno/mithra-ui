@@ -1,0 +1,18 @@
+body{
+  margin: 0px;
+}
+
+.coupleWrapper{
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex:0 0 200px;
+}
+
+.coupleWrapper:nth-child(1){
+
+}
+
+.coupleWrapper:nth-child(2){
+  flex-grow: 100;
+}

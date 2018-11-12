@@ -1,5 +1,5 @@
-import {IAppStoreModule} from './modules/app/interfaces'
+import {IAppStoreModule} from "./modules/app/interfaces";
 
-export interface IRootStore{
-  appStore:IAppStoreModule
+export interface IRootStore {
+  appStore: IAppStoreModule;
 }
