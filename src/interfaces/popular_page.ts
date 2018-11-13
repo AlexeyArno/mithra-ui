@@ -1,0 +1,29 @@
+export interface IPopularPageStoreModule {
+  data: IPopularPageWarehouse;
+}
+
+export interface IPopularPageWarehouse {
+  mainStream: IMainStream;
+  themes: IPopularTheme[];
+}
+
+export interface IChannelInfo {
+  Img: string;
+  Name: string;
+  Follow: boolean;
+}
+
+export interface IMainStream {
+  Link: string;
+  Author: IChannelInfo;
+  Name: string;
+  Description: string;
+  Viewers: number;
+  Theme: string;
+}
+
+export interface IPopularTheme {
+  Viewers: number;
+  Img: string;
+  Name: string;
+}

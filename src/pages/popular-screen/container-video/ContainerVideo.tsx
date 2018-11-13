@@ -1,18 +1,23 @@
-import * as React from 'react';
-import { Link } from 'react-router-dom'
-import VideoPlayer from "./video-player/VideoPlayer"
-import UserInfoStreamer from "./user-info-streamer/UserInfoStreamer"
-import DescriptionVideo from "./description-video/DescriptionVideo"
-import ThemeVideo from "./theme-video/ThemeVideo"
-import PanelWithNumberViewers from "./panel-with-number-viewers/PanelWithNumberViewers"
-require('./ContainerVideo.scss')
+import * as React from "react";
+import VideoPlayer from "./video-player/VideoPlayer";
+import UserInfoStreamer from "./user-info-streamer/UserInfoStreamer";
+import DescriptionVideo from "./description-video/DescriptionVideo";
+import ThemeVideo from "./theme-video/ThemeVideo";
+import PanelWithNumberViewers from "./panel-with-number-viewers/PanelWithNumberViewers";
+// tslint:disable-next-line
+import { IMainStream } from "src/interfaces/popular_page";
+require("./ContainerVideo.scss");
 
-class ContainerVideo extends React.Component<{}> {
-  constructor(props){
-    super(props)
+interface IContainerProps {
+  data: IMainStream;
+}
+
+class ContainerVideo extends React.Component<IContainerProps> {
+  constructor(props) {
+    super(props);
   }
 
-  render(){
+  public render() {
     return(
       <div className="ContainerVideoStyle">
         <VideoPlayer/>
@@ -26,8 +31,8 @@ class ContainerVideo extends React.Component<{}> {
           {/* </div> */}
         </div>
       </div>
-    )
-  }  
+    );
+  }
 }
 
-export default ContainerVideo
+export default ContainerVideo;

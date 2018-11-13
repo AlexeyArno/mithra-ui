@@ -1,5 +1,5 @@
 import PopularScreen from "../pages/popular-screen";
-import NavigationBar from "../pages/navigation-bar";
+import NavigationBar from "../components/navigation-bar";
 
 import * as React from "react";
 
