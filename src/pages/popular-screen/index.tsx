@@ -3,21 +3,25 @@ import ContainerVideo from "./container-video/ContainerVideo";
 import PopularTopicsTopBar from "./popular-topics/popular-topics-top-bar/PopularTopicsTopBar";
 import PopularTopics from "./popular-topics/PopularTopics";
 import PopularBroadcast from "./popular-broadcast/PopularBroadcast";
-// tslint:disable-next-line
-import { IPopularPageWarehouse } from "src/interfaces/popular_page";
-require("./PopularScreen.scss");
+import { IPopularPageStoreModule } from "src/interfaces/popular_page";
+import { observer, inject } from "mobx-react";
+require("./styles.scss");
 
 interface IPopularScreenProps {
-  store: IPopularPageWarehouse;
+  store?: {
+    popularStore: IPopularPageStoreModule;
+  };
 }
 
+@inject("store")
+@observer
 class PopularScreen extends React.Component<IPopularScreenProps> {
   constructor(props) {
     super(props);
   }
 
   public render() {
-    const store: IPopularPageWarehouse = this.props.store;
+    const store: IPopularPageStoreModule = this.props.store.popularStore;
     return(
       <div className="contentWrapper PopularScreenContainerMain ">
         <div className="PopularScreenContent">
@@ -28,7 +32,7 @@ class PopularScreen extends React.Component<IPopularScreenProps> {
 
             <div className="PopularScreenPopularTopicsLeft">
               {/* <PopularTopicsTopBar/> */}
-              <PopularTopics/>
+              <PopularTopics themes={store.themes}/>
             </div>
           </div>
 

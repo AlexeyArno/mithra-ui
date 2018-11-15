@@ -3,6 +3,4 @@ TODO:
 
   + Make some little change in design 
 
-  Add test
-
-  Make adaptive for [hd, full hd]
+  Make adaptive for [hd, full hd] (View will be similar)

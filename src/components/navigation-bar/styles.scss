@@ -1,4 +1,4 @@
-.ContainerBtn{
+.containerButton{
   width: 100px;
   min-height: 100vh;
   background-color:#F9F9F9;
@@ -6,7 +6,7 @@
   display: inline-block;
 }
 
-.ContainerBtnActive{
+.containerButton.active{
   width: 240px;
   min-height: 100vh;
   background-color:#F9F9F9;
@@ -31,7 +31,7 @@
   
 }
 
-.BackBtn{
+.bottom{
   height: 8%;
 }
 

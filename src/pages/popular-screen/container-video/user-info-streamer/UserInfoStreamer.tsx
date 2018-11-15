@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { Link } from 'react-router-dom'
-import {UserAvatar} from "src/components/user-avatar/UserAvatar"
+import {UserAvatar} from "src/components/user-avatar";
 import ProfessionStreamer from "./profession/ProfessionStreamer"
 import NameStreamer from "./name/NameStreamer"
 import Like from "./like/Like"

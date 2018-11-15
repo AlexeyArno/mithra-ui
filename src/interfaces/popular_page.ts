@@ -1,8 +1,4 @@
 export interface IPopularPageStoreModule {
-  data: IPopularPageWarehouse;
-}
-
-export interface IPopularPageWarehouse {
   mainStream: IMainStream;
   themes: IPopularTheme[];
 }

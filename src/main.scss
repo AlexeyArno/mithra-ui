@@ -3,7 +3,7 @@ body{
 }
 
 .contentWrapper{
-  overflow: hidden;
+  overflow: auto;
   height: 100vh;
   width: 100%;
 }
@@ -13,10 +13,6 @@ body{
   display: flex;
   width: 100vw;
   height: 100vh;
-}
-
-.coupleWrapper:nth-child(1){
-
 }
 
 .coupleWrapper:nth-child(2){

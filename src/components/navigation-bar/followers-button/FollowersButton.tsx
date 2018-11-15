@@ -1,30 +1,30 @@
-import * as React from 'react'
-import FollowersPic from './FollowersPic/FollowersPic'
+import * as React from "react";
+import FollowersPic from "./FollowersPic/FollowersPic";
 // import {connect} from "react-redux";
 // import {bindActionCreators} from "redux"
 
-require('./FollowersButton.scss')
+require("./FollowersButton.scss");
 
-import RootStore from 'src/store'
-import { observer, inject } from 'mobx-react'
+import RootStore from "src/store";
+import { observer, inject } from "mobx-react";
 
-interface FollowersBtnComponentProps{
-  store?: RootStore
+interface IFollowersButtonProps {
+  store?: RootStore;
 }
 
-@inject('store')
+@inject("store")
 @observer
-export class FollowersButton extends React.Component<FollowersBtnComponentProps, {}>{
+export class FollowersButton extends React.Component<IFollowersButtonProps, {}> {
   constructor(props) {
     super(props);
   }
-    
-  render(){
+
+  public render() {
     // console.log(this.props.open)
     return(
       <div className="FllwrsBtn">
-        {(this.props.store.appStore.leftBarState)? <div className="TextFollowers">Followed</div>: <FollowersPic/>}
+        {(this.props.store.appStore.leftBarState) ? <div className="TextFollowers">Followed</div> : <FollowersPic/>}
       </div>
-    )
-  }   
+    );
+  }
 }
