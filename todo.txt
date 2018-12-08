@@ -1,0 +1,6 @@
+TODO:
+  + Architecture discover
+
+  + Make some little change in design 
+
+  Make adaptive for [hd, full hd] (View will be similar)

@@ -1,6 +1,11 @@
 {
   "extends": ["tslint:latest", "tslint-react"],
   "rules": {
-    "jsx-wrap-multiline": false
+    "jsx-wrap-multiline": false,
+    "object-literal-sort-keys": false,
+    "no-var-requires": false,
+    "ordered-imports":false,
+    "no-implicit-dependencies": [true, ["src"]],
+    "no-submodule-imports": [true, "src"]
   }
 }

@@ -1,19 +1,18 @@
-import { observable, action, reaction, computed } from 'mobx'
-import { IAppStoreModule } from './interfaces';
-// import { RootStore } from 'src/store';
+import { observable, action} from "mobx";
+import { IAppStoreModule } from "../../../interfaces/app_state";
 
-export default class AppStoreModule implements IAppStoreModule{
-  @observable leftBarState:boolean
-  rootStore:any
+export default class AppStoreModule implements IAppStoreModule {
+  @observable public leftBarState: boolean;
+  public rootStore: any;
 
-  constructor(rootStore:any) {
+  constructor(rootStore: any) {
     this.leftBarState = false;
-    this.rootStore = rootStore
+    this.rootStore = rootStore;
   }
 
   @action
-  changeLeftBar() {
-    this.leftBarState = !this.leftBarState
+  public changeLeftBar() {
+    this.leftBarState = !this.leftBarState;
   }
 
 }

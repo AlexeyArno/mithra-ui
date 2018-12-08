@@ -1,37 +1,37 @@
-import * as React from 'react'
-import {connect} from "react-redux"
-import {bindActionCreators} from "redux"
-import { withRouter } from 'react-router'
+import * as React from "react";
+import {connect} from "react-redux";
+import {bindActionCreators} from "redux";
+import { withRouter } from "react-router";
 
-require('./UserName.scss')
+require("./UserName.scss");
 
-interface UserNameProps{
-  open: any
+interface UserNameProps {
+  open: any;
 }
 
-class UserNameComponent extends React.Component<UserNameProps, {}>{
+class UserNameComponent extends React.Component<UserNameProps, {}> {
   constructor(props) {
     super(props);
   }
 
-  render(){
-    let name="Spider Man"
+  public render() {
+    const name = "Spider Man";
     return(
       <div  className="UserNameStyle" >
         {name}
       </div>
-    )
+    );
   }
 }
 
-const mapStateToProps = (state:any, ownProps:any) =>{
+const mapStateToProps = (state: any, ownProps: any) => {
     return {
       open: state.leftBarStateReducer.leftBarIsOpen,
-      ...ownProps
-    }
-}
+      ...ownProps,
+    };
+};
 
-const mapDispatchToProps = dispatch =>
+const mapDispatchToProps = (dispatch) =>
   bindActionCreators({}, dispatch);
 
-export const UserName = connect(mapStateToProps, mapDispatchToProps)(UserNameComponent)
+export const UserName = connect(mapStateToProps, mapDispatchToProps)(UserNameComponent);

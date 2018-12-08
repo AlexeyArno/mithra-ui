@@ -1,0 +1,96 @@
+.PopularScreenContainerMain{
+  max-width: 1820px;
+  // height: 100vh;
+  // padding: 4%; 
+  padding:20px;
+  // float: right;
+  margin: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+  // width: calc(100vw - 197px);
+}
+
+
+
+.PopularScreenContent{
+  max-width: 1550px;
+  //height: 100vh;
+  //overflow-y: auto;
+  //overflow-x: hidden;
+  background-color:white;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  justify-content: center;
+}
+
+//1160px 420px 424
+
+.PopularScreenPopularTopicsLeft{
+  // max-width: 1160px;
+  margin-top:30px;
+  max-height: 424px;
+}
+
+.PopularScreenContentLeft{
+  padding-top: 43px;
+  //max-width: 1000px;
+  max-height: 800px;
+}
+
+.PopularScreenContentRight{
+  max-height: 844px;
+  max-width: 390px;
+}
+
+.PopularScreenVideoDescriptionLeft{
+  padding:0px 40px;
+}
+
+@media screen and (max-width:1510px){
+  // .PopularScreenContent{
+  //   max-width: 1550px;
+  //   max-height: 844px;
+  //   // margin: auto;
+  //   margin: 3.5%;
+  //   // margin-left: 90px;
+  //   // margin-top:40px;
+  //   // margin-bottom:120px;
+  //   // background-color:black;
+  //   display: flex;
+  //   flex-direction: row;
+  // }
+
+  .PopularScreenPopularTopicsLeft{
+    // max-width: 1160px;
+    // max-height: 424px;
+    width: calc(100vw - 200px);
+  }
+  
+  // .PopularScreenContentLeft{
+  //   float: left;
+  // }
+  
+  .PopularScreenContentRight{
+    // float: right;
+    // max-height: 844px;
+    // max-width: 390px;
+    display: none;
+  }
+}
+@media screen and (min-width: 1510px){
+  .PopularScreenContentLeft{
+    max-width: 1000px;
+  }
+}
+
+@media screen and (max-width:1510px){
+ 
+  .PopularScreenPopularTopicsLeft{
+    width: calc(100vw - 200px);
+  }
+
+  .PopularScreenContentRight{
+    display: none;
+  }
+}

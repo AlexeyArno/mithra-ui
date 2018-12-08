@@ -1,15 +1,17 @@
-import * as React from 'react';
-import { render } from 'react-dom';
-// import { Provider } from 'mobx-react'
-import Router from './routes/router'
-import Routes from './routes/routes'
+import * as React from "react";
+import { render } from "react-dom";
+import Router from "./routes/router";
+import Routes from "./routes/routes";
+import Store from "./store";
+import { IRootStore } from "./store/interfeces";
 
+require("./main.scss");
 
-
+const store: IRootStore  = new Store();
 render(
-    <main>
-      <Router pathways={Routes}/> 
-    </main>
-    ,
-    document.getElementById('root'),
+  <main>
+    <Router pathways={Routes} store={store}/>
+  </main>
+  ,
+  document.getElementById("root"),
 );
