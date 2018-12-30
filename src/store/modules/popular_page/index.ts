@@ -15,7 +15,7 @@ export default class PopularPageStoreModule implements IPopularPageStoreModule {
       Theme: "Philosophy",
       Viewers: 2345,
       Author: {
-        Img: "Img",
+        Img: "https://pp.userapi.com/c850720/v850720387/28481/U3ff4B3qSdc.jpg?ava=1",
         Follow: true,
         Name: "Ubermarginal",
       },

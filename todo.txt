@@ -1,6 +1,8 @@
 TODO:
-  + Architecture discover
-
-  + Make some little change in design 
-
-  Make adaptive for [hd, full hd] (View will be similar)
+  Popular Page:
+    Suggestion video mock
+    Themes mock 
+    Tops mock
+  Side Bar mock
+  SignUp
+  SignIn

@@ -1,0 +1,23 @@
+.suggestion-form{
+  // width: 800px;
+  height: 400px;
+  background: $passive-color;
+  margin: 15px;
+  display: inline-block;
+  display: flex;
+}
+
+.suggestion-form__player{
+  
+  width: calc(100% - 250px);
+  position: relative;
+  height: 100%;
+}
+
+
+
+// .suggestion-form__player::before{
+//   display: block; /* отображать элемент как блок */
+//   content: ""; /* содержимое псевдоэлемента */
+//   width: 100%;
+// }

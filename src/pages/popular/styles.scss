@@ -1,0 +1,16 @@
+.popular-page{
+  display: flex;
+  width: 100%;
+  max-width: 1300px;
+  padding-top: 30px;
+  /* padding-left: 30px; */
+  margin: 0 auto;
+}
+
+.popular-page__column{
+  width: calc(100% - 250px);
+  display: flex;
+  min-width: 600px;
+  max-width: 1000px;
+  flex-direction: column;
+}

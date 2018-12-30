@@ -14,11 +14,13 @@ function getEntrySources(sources) {
 }
 
 
+
 module.exports = {
   entry: getEntrySources(['./src/index.tsx']),
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+   
   },
   cache:true,
   resolve: {
@@ -86,7 +88,10 @@ module.exports = {
           }
         },
       ]
-    } 
+    },{
+      test: /\.otf$/,
+      loader: 'url-loader?limit=100000'
+    }
   ]
   },
   plugins: [
