@@ -9,15 +9,17 @@ export default class PopularPageStoreModule implements IPopularPageStoreModule {
 
   constructor(rootStore: any) {
     this.mainStream = {
-      Description: "Description 1",
+      Description: `Philosophy is the study of general and fundamental problems concerning matters such as existence,
+          knowledge, values, reason, mind, and language. The term was probably coined by Pythagoras.`,
       Link: "link",
-      Name: "Марго сосёт бибу",
+      Name: "The Best Philosophy Big Boy",
       Theme: "Philosophy",
       Viewers: 2345,
       Author: {
         Img: "https://pp.userapi.com/c850720/v850720387/28481/U3ff4B3qSdc.jpg?ava=1",
         Follow: true,
         Name: "Ubermarginal",
+        Badge: "Designer",
       },
     };
     this.themes = [

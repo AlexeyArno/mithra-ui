@@ -1,7 +1,17 @@
 $primary-color: #595BD2;
 $passive-color: #F9F9F9;
+$passive-accent-color: #9A98A1;
+
+// @font-face {
+//   font-family: "Helvetica";
+//   src: url("~/fonts/Helvetica.otf");
+//  }  
 
 @font-face {
-  font-family: "Helvetica";
-  src: url("~/Helvetica.otf");
- }  
+  font-family: "San-Francisco Regular";
+  src: url("~/fonts/SFUIDisplay-Regular.eot"),
+        url("~/fonts/SFUIDisplay-Regular.ttf") format('truetype'),
+        url("~/fonts/SFUIDisplay-Regular.woff") format('woff')
+
+
+}

@@ -1,0 +1,23 @@
+.online-users{
+  display: flex;
+  padding-top: 4px;
+}
+
+
+.online-users__icon{
+  width: 15px;
+  height: 20px;
+  padding-top: 1px;
+  svg{
+    path{
+      fill: red;
+    }
+  }
+}
+
+.online-users__count{
+  color: red;
+  font-weight: 600;
+  font-size: 13px;
+  margin-left: 5px; 
+}

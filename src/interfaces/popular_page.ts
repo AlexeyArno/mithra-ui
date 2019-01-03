@@ -7,6 +7,7 @@ export interface IChannelInfo {
   Img: string;
   Name: string;
   Follow: boolean;
+  Badge: string;
 }
 
 export interface IMainStream {

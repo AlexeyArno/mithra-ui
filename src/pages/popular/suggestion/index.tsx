@@ -3,10 +3,12 @@ import { observer, inject } from "mobx-react";
 import { IMainStream } from "src/interfaces/popular_page";
 import Player from "src/components/player";
 import Info from "./info";
+import { IRootStore } from "src/store/interfeces";
 require("./styles.scss");
 
 interface ISuggestionStreamProps {
   data?: IMainStream;
+  store?: IRootStore;
 }
 
 //
@@ -25,7 +27,7 @@ class SuggestionStream extends React.Component<ISuggestionStreamProps> {
         <div className="suggestion-form__player">
           <Player streamName={author}/>
         </div>
-        <Info data={this.props.data}/>
+        <Info data={this.props.data} badges={this.props.store.appStore.badges}/>
       </div>
     );
   }

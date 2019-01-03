@@ -1,10 +1,12 @@
 .suggestion-form{
   // width: 800px;
-  height: 400px;
+  height: 350px;
+  min-height: 350px;
   background: $passive-color;
   margin: 15px;
   display: inline-block;
   display: flex;
+  max-height: 400px;
 }
 
 .suggestion-form__player{
