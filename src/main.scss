@@ -19,3 +19,7 @@ body{
 .coupleWrapper:nth-child(2){
   flex-grow: 100;
 }
+
+.page{
+  overflow: auto;
+}

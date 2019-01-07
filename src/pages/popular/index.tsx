@@ -23,10 +23,10 @@ class PopularPage extends React.Component<IPopularPageProps> {
     const store: IPopularPageStoreModule = this.props.store.popularStore;
     // console.log(this.props.store)
     return(
-      <div className="popular-page">
-        <div className="popular-page__column">
+      <div className="popular page">
+        <div className="popular__column">
           <SuggestionStream data={store.mainStream}/>
-          <Themes/>
+          <Themes data={this.props.store.popularStore.themes}/>
         </div>
         <TopSideBar/>
       </div>

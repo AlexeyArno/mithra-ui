@@ -23,4 +23,5 @@ export interface IPopularTheme {
   Viewers: number;
   Img: string;
   Name: string;
+  Url: string;
 }

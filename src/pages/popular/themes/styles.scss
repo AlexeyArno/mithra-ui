@@ -1,6 +1,37 @@
 .themes{
-  // width: 800px;
   height: 400px;
-  background: red;
   margin: 15px;
+}
+
+.themes__header{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// Featured Areas
+.themes__header__left__name{
+  font-size: 26px;
+  color:#5A5761;
+}
+
+.themes__header__left__description{
+  color:#D4D4D4;
+}
+
+// See All Areas Button
+.themes__header>div:nth-child(2){
+  background: $passive-color;
+  padding: 5px 20px;
+  color: $primary-color;
+  cursor: pointer;
+}
+
+.themes__header>div:nth-child(2):hover{
+  color: lighten($primary-color, 20%);
+}
+
+.themes__bar-wrapper{
+  margin-top: 20px;
 }

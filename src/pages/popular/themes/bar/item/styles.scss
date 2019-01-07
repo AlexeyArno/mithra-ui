@@ -1,0 +1,29 @@
+.popular-page__themes__bar-item{
+  // width: 200px;
+  margin: 10px 20px;
+}
+
+.popular-page__themes__bar-item:nth-child(1){
+  margin-left: 0px;
+}
+
+.popular-page__themes__bar-item>img{
+  width: 220px;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.05);
+  height: 150px;
+}
+
+.popular-page__themes__bar-item>div{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #5A5761;
+  align-items: center;
+}
+
+.popular-page__themes__bar-item>div>div:nth-child(2){
+  font-size: 12px;
+  color:#5A5761;
+  opacity: 0.6;
+}

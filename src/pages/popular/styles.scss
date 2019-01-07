@@ -1,4 +1,4 @@
-.popular-page{
+.popular{
   display: flex;
   width: 100%;
   max-width: 1300px;
@@ -7,7 +7,7 @@
   margin: 0 auto;
 }
 
-.popular-page__column{
+.popular__column{
   width: calc(100% - 250px);
   display: flex;
   min-width: 600px;

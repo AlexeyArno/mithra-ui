@@ -23,9 +23,14 @@ export default class PopularPageStoreModule implements IPopularPageStoreModule {
       },
     };
     this.themes = [
-        {Img: "img", Name: "Design", Viewers: 255},
-        {Img: "img", Name: "Code", Viewers: 1255},
-        {Img: "img", Name: "Photo", Viewers: 2355},
+        {Img: "https://techrocks.ru/wp-content/uploads/2018/10/coding-924920_1280.jpg",
+         Name: "Design", Viewers: 255, Url: "#"},
+        {Img: "https://techrocks.ru/wp-content/uploads/2018/10/coding-924920_1280.jpg",
+         Name: "Code", Viewers: 1255, Url: "#"},
+        {Img: "https://techrocks.ru/wp-content/uploads/2018/10/coding-924920_1280.jpg",
+         Name: "Photo", Viewers: 2355, Url: "#"},
+        {Img: "https://techrocks.ru/wp-content/uploads/2018/10/coding-924920_1280.jpg",
+         Name: "3D", Viewers: 1938, Url: "#"},
     ];
     this.rootStore = rootStore;
   }
