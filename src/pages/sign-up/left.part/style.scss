@@ -1,0 +1,16 @@
+.left-screen{
+  width: 960px;
+  height: 100vh;
+  background: #595BD2;
+  display:flex;
+  align-items: center;
+  // opacity: 0.7;
+  // background-image: url(./LeftPic.png) 
+}
+
+.left-screen__text{
+  margin: auto;
+  color: white;
+  font-size: 6vw;
+  // text-align: center;
+}
