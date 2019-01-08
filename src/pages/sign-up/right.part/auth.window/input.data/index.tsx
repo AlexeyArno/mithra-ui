@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom'
-require('./InputData.scss')
+require('./style.scss')
 
 class InputData extends React.Component<{}> {
   constructor(props){
@@ -9,8 +9,8 @@ class InputData extends React.Component<{}> {
 
   render(){
     return(
-      <div className="InputData">
-        <p className="TextForAuth"> Create your account </p>
+      <div className="input-data">
+        <p className="input-data__text__auth"> Create your account </p>
         <input type="login" placeholder="Email or login" name="login" />
         <input type="password" placeholder="Password" name="psw" />
       </div>
