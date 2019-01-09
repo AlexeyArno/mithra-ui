@@ -11,12 +11,10 @@ class SignUp extends React.Component<{}> {
 
   render(){
     return(
-    // <div className="wrapper">
       <div className="sign-up">
         <LeftHalfScreen/>
         <RightHalfScreen/>
-        </div>
-        // </div>
+      </div>
     )
   }  
 }

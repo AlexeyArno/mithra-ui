@@ -1,11 +1,12 @@
 .left-screen{
   width: 100vh;
   height: 100vh;
-  background: #595BD2;
+  background: rgba(89, 91, 210, 0);
   display:flex;
   align-items: center;
-  // opacity: 0.7;
-  // background-image: url(./assets/back.png);
+  opacity: 0.5;
+
+  overflow: hidden;
 }
 
 .left-screen__text{
@@ -14,3 +15,8 @@
   font-size: 6vw;
   // text-align: center;
 }
+
+.left-screen__img{
+  // text-align: center;
+}
+
