@@ -4,19 +4,21 @@ import LeftHalfScreen from "./left.part"
 import RightHalfScreen from "./right.part"
 require('./style.scss')
 
-class SignUpScreen extends React.Component<{}> {
+class SignUp extends React.Component<{}> {
   constructor(props){
     super(props)
   }
 
   render(){
     return(
+    // <div className="wrapper">
       <div className="sign-up">
         <LeftHalfScreen/>
         <RightHalfScreen/>
-      </div>
+        </div>
+        // </div>
     )
   }  
 }
 
-export default SignUpScreen
+export default SignUp
