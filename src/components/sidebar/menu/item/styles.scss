@@ -1,6 +1,13 @@
+.sidebar-item__icon,
+.sidebar-item__icon-active{
+  display: none;
+}
+
 .sidebar-item-open,
 .sidebar-item-close{
   display: flex;
+  text-decoration: none;
+  
   justify-content: space-around;
   height: 40px;
   cursor: pointer;
@@ -8,6 +15,14 @@
   padding: 5px 0px; 
   align-items: center;
 }
+
+.sidebar-item-open,
+.sidebar-item-open-active{
+  justify-content: space-between;
+  padding-left: 40px; 
+  color: $passive-accent-color;
+}
+
 
 .sidebar-item__icon>svg,
 .sidebar-item__icon-close>svg,
@@ -22,6 +37,15 @@
   fill: $primary-color !important;
 }
 
-.sidebar-item__name-close{
+.sidebar-item__name-close,
+.sidebar-item__name-close-active{
   display: none;
+}
+
+.sidebar-item__name-open{
+  text-decoration: none !important;
+}
+
+.sidebar-item__name-open-active{
+  color: $primary-color;
 }

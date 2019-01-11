@@ -5,10 +5,12 @@ export default class AppStoreModule implements IAppStoreModule {
   @observable public leftBarState: boolean;
   @observable public user: IUser;
   @observable public badges: {[key: string]: string};
+  @observable public language: string;
   public rootStore: any;
 
   constructor(rootStore: any) {
-    this.leftBarState = false;
+    this.leftBarState = true;
+    this.language = "English";
     this.badges = {
       Designer: "/assets/edit.svg",
       Dreamer: "/assets/favorites.svg",

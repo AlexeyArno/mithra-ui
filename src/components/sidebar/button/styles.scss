@@ -1,0 +1,19 @@
+.side-bar__button__icon,
+.side-bar__button__icon-open{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  bottom: 20px;
+  width: 100%;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.side-bar__button__icon>svg,
+.side-bar__button__icon-open>svg{
+  width: 20px;
+}
+
+.side-bar__button__icon-open{
+  transform: scale(-1, 1);
+}

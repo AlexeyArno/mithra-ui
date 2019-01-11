@@ -21,6 +21,7 @@ const icons: {[key: string]: string} = {
 
 interface ISideBarMenuProps {
   open: boolean;
+  lang: string;
 }
 
 interface ISideBarMenuState {
@@ -57,6 +58,7 @@ export default class SideBarMenu extends React.Component<ISideBarMenuProps, ISid
           return <SideBarMenuItem
                       icon={icons[key]}
                       key={i}
+                      lang={this.props.lang}
                       name={key}
                       active={(currentUrl === key)}
                       open={this.props.open}

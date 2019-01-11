@@ -3,6 +3,7 @@ import { observer, inject } from "mobx-react";
 import {IAppStoreModule, IUser} from "src/interfaces/app_state";
 import SideBarUser from "./user";
 import SideBarMenu from "./menu";
+import SideBarButton from "./button";
 require("./styles.scss");
 
 interface ISideBarProps {
@@ -22,11 +23,12 @@ class SideBar extends React.Component<ISideBarProps> {
     const open: boolean = this.props.store.appStore.leftBarState;
     const user: IUser = this.props.store.appStore.user;
     const badge: {[key: string]: string} = this.props.store.appStore.badges;
-    const sideClassName  = open ? "sidebar sidebar-open" : "sidebar";
+    const sideClassName  = open ? "sidebar-open" : "sidebar";
     return(
       <div className={sideClassName}>
         <SideBarUser user={user} badges={badge} open={open}/>
-        <SideBarMenu open={open}/>
+        <SideBarMenu open={open} lang={this.props.store.appStore.language}/>
+        <SideBarButton/>
       </div>
     );
   }
