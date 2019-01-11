@@ -1,9 +1,10 @@
 import { observable, action} from "mobx";
-import { IAppStoreModule } from "../../../interfaces/app_state";
+import { IAppStoreModule, IUser } from "../../../interfaces/app_state";
 
 export default class AppStoreModule implements IAppStoreModule {
   @observable public leftBarState: boolean;
-  public badges: {[key: string]: string};
+  @observable public user: IUser;
+  @observable public badges: {[key: string]: string};
   public rootStore: any;
 
   constructor(rootStore: any) {
@@ -13,6 +14,12 @@ export default class AppStoreModule implements IAppStoreModule {
       Dreamer: "/assets/favorites.svg",
     };
     this.rootStore = rootStore;
+    this.user = {
+      token: "1111",
+      avatar: "https://pp.userapi.com/c850720/v850720387/28481/U3ff4B3qSdc.jpg?ava=1",
+      badge: "Designer",
+      name: "Alex Arno",
+    };
   }
 
   @action

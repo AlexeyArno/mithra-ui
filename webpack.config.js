@@ -103,6 +103,7 @@ module.exports = {
   devServer: {
     port: 8080,
     contentBase: (__dirname, './dist'),
+    historyApiFallback: true,
     compress: true
   }
 };

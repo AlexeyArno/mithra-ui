@@ -1,10 +1,11 @@
 import * as React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch, Redirect} from "react-router-dom";
 
+import {IRoute} from "src/interfaces/routes";
 import { Provider } from "mobx-react";
 
 interface IRouterComponentProps {
-  pathways: Array<{path: string, component: JSX.Element}>;
+  pathways: {[key: string]: IRoute};
   store: any;
 }
 
@@ -16,7 +17,7 @@ const Page404 = () => <h1>Page not found</h1>;
 class Router extends React.Component<IRouterComponentProps, {}> {
 
   public static defaultProps: Partial<IRouterComponentProps> = {
-    pathways: [],
+    pathways: {},
   };
 
   constructor(props: IRouterComponentProps) {
@@ -25,21 +26,21 @@ class Router extends React.Component<IRouterComponentProps, {}> {
 
   public render() {
     const {pathways} = this.props;
-    const pathesRendered: JSX.Element[] =
-      pathways.map((ob: {path: string, component: JSX.Element}, key) =>
+    const pathesRendered: JSX.Element[] = Object.keys(pathways).map((name, key) =>
         <Route
-         path={ob.path}
+         path={pathways[name].path}
          exact={true}
          key={key}
-         component={Page(ob.component, this.props.store)}
+         component={Page(pathways[name].component, this.props.store)}
         />);
-    pathesRendered.push(<Route key={pathways.length} component={Page404}/>);
+    pathesRendered.push(<Route key={Object.keys(pathways).length} component={Page404}/>);
     return(
       <BrowserRouter>
         <div>
           <Switch>
             {pathesRendered}
           </Switch>
+          <Redirect from="/" to="popular" />
         </div>
       </BrowserRouter>
     );
