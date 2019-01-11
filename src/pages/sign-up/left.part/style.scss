@@ -1,22 +1,19 @@
 .left-screen{
   width: 100vh;
   height: 100vh;
-  background: rgba(89, 91, 210, 0);
+  // background: rgba(89, 91, 210, 0);
   display:flex;
   align-items: center;
-  opacity: 0.5;
-
+  opacity: 0.6;
   overflow: hidden;
+  background-image: url("https://images.pexels.com/photos/1080854/pexels-photo-1080854.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-size: cover;
 }
 
 .left-screen__text{
   margin: auto;
   color: white;
   font-size: 6vw;
-  // text-align: center;
 }
 
-.left-screen__img{
-  // text-align: center;
-}
 
