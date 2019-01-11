@@ -1,12 +1,13 @@
 import * as React from "react";
 import { BrowserRouter, Route, Switch, Redirect} from "react-router-dom";
-
-import {IRoute} from "src/interfaces/routes";
 import { Provider } from "mobx-react";
+import App from "./app";
 
 interface IRouterComponentProps {
-  pathways: {[key: string]: IRoute};
+  pathways: {[key: string]: JSX.Element};
+  sidebarRoutes: {[key: string]: JSX.Element};
   store: any;
+  defaultRedirect: string;
 }
 
 const Page = (component: JSX.Element, store: any) => {
@@ -21,27 +22,29 @@ class Router extends React.Component<IRouterComponentProps, {}> {
   };
 
   constructor(props: IRouterComponentProps) {
-      super(props);
+    super(props);
   }
 
   public render() {
-    const {pathways} = this.props;
-    const pathesRendered: JSX.Element[] = Object.keys(pathways).map((name, key) =>
-        <Route
-         path={pathways[name].path}
-         exact={true}
-         key={key}
-         component={Page(pathways[name].component, this.props.store)}
-        />);
-    pathesRendered.push(<Route key={Object.keys(pathways).length} component={Page404}/>);
+    const {pathways, sidebarRoutes} = this.props;
+
+    const routes: JSX.Element[] = Object.keys(pathways).map((name, key) =>
+          <Route
+            path={name}
+            key={key}
+            component={Page(sidebarRoutes[name], this.props.store)}
+          />);
+
+    const app = () => <App pathways={sidebarRoutes} defaultRedirect={this.props.defaultRedirect} />;
+
     return(
       <BrowserRouter>
-        <div>
-          <Switch>
-            {pathesRendered}
-          </Switch>
-          <Redirect from="/" to="popular" />
-        </div>
+        <Switch>
+          <Route path="/" component={app} />
+          {routes}
+          <Route key={Object.keys(pathways).length} component={Page404}/>
+          <Redirect from="/" to={this.props.defaultRedirect} />
+        </Switch>
       </BrowserRouter>
     );
   }
