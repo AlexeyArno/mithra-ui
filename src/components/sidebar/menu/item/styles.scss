@@ -1,0 +1,27 @@
+.sidebar-item-open,
+.sidebar-item-close{
+  display: flex;
+  justify-content: space-around;
+  height: 40px;
+  cursor: pointer;
+  // margin: 10px 0px;
+  padding: 5px 0px; 
+  align-items: center;
+}
+
+.sidebar-item__icon>svg,
+.sidebar-item__icon-close>svg,
+.sidebar-item__icon-close-active>svg{
+  width: 15px;
+}
+
+.sidebar-item__icon-close>svg>path{
+  fill: lighten($passive-accent-color, 18%);
+}
+.sidebar-item__icon-close-active>svg{
+  fill: $primary-color !important;
+}
+
+.sidebar-item__name-close{
+  display: none;
+}
