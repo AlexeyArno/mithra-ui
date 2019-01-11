@@ -1,8 +1,8 @@
-import * as React from 'react';
-import { Link } from 'react-router-dom'
-import InputData from "./input.data"
-import SignWith from "./sign-with"
-require('./style.scss')
+import * as React from "react";
+import { Link } from "react-router-dom";
+import InputData from "./input.data";
+import SignWith from "./sign-with";
+require("./style.scss");
 
 class AuthWindow extends React.Component<{}> {
   constructor(props){
@@ -24,7 +24,7 @@ class AuthWindow extends React.Component<{}> {
           </div>
         </div>  
         
-        <SignWith/>
+        {/* <SignWith/> */}
       </div>
     )
   }  

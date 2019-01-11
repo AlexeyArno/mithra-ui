@@ -22,7 +22,7 @@ class Router extends React.Component<IRouterComponentProps, {}> {
   };
 
   constructor(props: IRouterComponentProps) {
-      super(props);
+    super(props);
   }
 
   public render() {

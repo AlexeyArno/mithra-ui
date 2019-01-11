@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { Link } from 'react-router-dom'
-require('./style.scss')
+import * as React from "react";
+import { Link } from "react-router-dom";
+require("./style.scss");
 
 class InputData extends React.Component<{}> {
   constructor(props){
