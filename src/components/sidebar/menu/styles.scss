@@ -1,0 +1,11 @@
+.sidebar__menu{
+  margin-top: 20vh;
+}
+
+.sidbar__menu__stick{
+  height: 50px;
+  width: 2px;
+  background: $primary-color;
+  position: absolute;
+  transition: 0.3s all ease-in-out;
+}

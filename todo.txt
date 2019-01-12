@@ -1,9 +1,9 @@
 TODO:
-  Popular Page:
+  Popular Page (Alex)
     Suggestion video mock
     Themes mock 
     Tops mock
-  Side Bar mock
-  SignUp: Isa
+  Side Bar (Alex)
+  SignUp (Isa)
     in work...
   SignIn
