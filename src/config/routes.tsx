@@ -10,15 +10,18 @@ import {IRoute} from "src/interfaces/routes";
 import * as React from "react";
 const CN: string = "coupleWrapper";
 
-const routes: {[key: string]: IRoute} = {
-  // Popular: {path: "/popular", component: <div className="coupleWrapper"><SideBar/> <PopularPage/></div>},
-  Popular: {path: "/popular", component: <div className="coupleWrapper"> <SignIn/><div className="content"/></div>},
+const SIDEBAR_ROUTES: {[key: string]: JSX.Element} = {
+  popular: <PopularPage/>,
+  follow: <Follow/>,
+  search: <Search/>,
+  settings: <Settings/>,
+  add: <Additional/>,
 };
 
 const ROUTES: {[key: string]: JSX.Element} = {
   sign: <Sign/>,
 };
 
-const DEFAULT_REDIRECT: string = "/popular";
+const DEFAULT_REDIRECT: string = "/sign";
 
 export {SIDEBAR_ROUTES, ROUTES, DEFAULT_REDIRECT};

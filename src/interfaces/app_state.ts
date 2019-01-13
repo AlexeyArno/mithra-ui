@@ -3,6 +3,7 @@ export interface IAppStoreModule {
   changeLeftBar: () => void;
   badges: {[key: string]: string};
   user: IUser;
+  language: string;
 }
 
 export interface IUser {

@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: white;
 }
 
 .auth__btns__up{
@@ -15,7 +16,7 @@
   cursor: pointer;margin:auto;
 }
 
-.auth__btns__in{
+.auth__btns__up{
   font-size: 15px;
   display: flex;
   align-items: center;

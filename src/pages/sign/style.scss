@@ -1,7 +1,25 @@
-.sign-up{
-  width: 100%;
+.sign{
+  max-width: 2880px;
+  // position: absolute;
   height: 100vh;
   display: flex;
   flex-direction: row;
+  margin:auto;
+  // opacity: 0.6;
+  // overflow: auto;
+  background-image: url("https://images.pexels.com/photos/1080854/pexels-photo-1080854.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=1500");
+}
+
+.sign__window{
+  width: 100vh;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0);
+}
+
+.sign__wrapper{
+  width: 2880px;
+  display: flex;
+  flex-direction: row;
+  // overflow: hidden;
   margin:auto;
 }

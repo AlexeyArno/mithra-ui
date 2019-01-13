@@ -1,9 +1,20 @@
 .side-bar__user{
   display: flex;
-  justify-content: space-around;
+  align-items: center;
   margin-top: 20px;
+  width: 100%;
+  justify-content: center;
 }
 
 .side-bar__user__desc_close{
   display: none;
+}
+
+.side-bar__user__desc{
+  align-content: space-around;
+  flex-flow: row wrap;
+  display: flex;
+  width: 100px;
+  margin-left: 20px;
+  height: 40px;
 }

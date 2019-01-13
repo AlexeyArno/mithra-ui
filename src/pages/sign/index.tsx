@@ -1,22 +1,26 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
-import LeftHalfScreen from "./left.part";
-import RightHalfScreen from "./right.part";
+import SignIn from "./in";
+import SignUp from "./up";
 require("./style.scss");
 
-class SignUp extends React.Component<{}> {
+
+class Sign extends React.Component<{}> {
   constructor(props) {
     super(props);
   }
 
   public render() {
     return(
-      <div className="sign-up">
-        <LeftHalfScreen/>
-        <RightHalfScreen/>
+      <div className="sign">
+        <div className="sign__wrapper">
+          <SignIn/>
+          <div className="sign__window"> </div>
+          <SignUp/>
+        </div>
       </div>
     );
   }
 }
 
-export default SignUp;
+export default Sign;

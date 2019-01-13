@@ -1,11 +1,16 @@
 import * as React from "react";
 import { observer, inject } from "mobx-react";
 import { IPopularTheme } from "src/interfaces/popular_page";
+import Language from "src/config/language";
 import Bar from "./bar";
+import AppStoreModule from "src/store/modules/app";
 require("./styles.scss");
 
 interface IThemesProps {
   data: IPopularTheme[];
+  store?: {
+    appStore: AppStoreModule;
+  };
 }
 
 @inject("store")
@@ -17,15 +22,15 @@ class Themes extends React.Component<IThemesProps> {
 
   public render() {
     const themes: IPopularTheme[] = this.props.data;
-    // console.log(this.props.store)
+    const dictionary = Language[this.props.store.appStore.language].popularPage;
     return(
       <div className="themes">
         <div className="themes__header">
           <div>
-            <div className="themes__header__left__name">Featured Areas</div>
-            <div className="themes__header__left__description">Areas people watching now</div>
+            <div className="themes__header__left__name">{dictionary.themesHeader}</div>
+            <div className="themes__header__left__description">{dictionary.themesHeaderDesc}</div>
           </div>
-          <div>See All Areas</div>
+          <div>{dictionary.themesAllButton}</div>
         </div>
         <div className="themes__bar-wrapper">
           <Bar themes={this.props.data}/>
