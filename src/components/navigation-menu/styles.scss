@@ -1,0 +1,31 @@
+.navigation-menu{
+  width: 100%;
+  border-bottom: 1px solid $passive-color;
+  padding-bottom: 5px;
+}
+
+.navigation-menu__content{
+  display: flex;
+  width: 100%;
+}
+
+.navigation-menu_li,
+.navigation-menu_li-active{
+  margin-right: 15px;
+  cursor: pointer;
+  color: $passive-accent-color;
+  font-size: 14px;
+}
+
+.navigation-menu_li-active{
+  color: $primary-color;
+}
+
+.navigation-menu__stick{
+  height: 3px;
+  background: $primary-color;
+  position: relative;
+  left: 0px;
+  top: 5px;
+  transition: all 0.2s ease-in-out;
+}

@@ -12,6 +12,10 @@ const lang: IAppLanguage = {
     themesHeader: "Рекомендуем",
     themesHeaderDesc: "Темы которые смотря прямо сейчас",
     themesAllButton: "Все темы",
+    goView: "Смотреть",
+    topBar: {
+      viewers: "смотрят",
+    },
   },
 };
 

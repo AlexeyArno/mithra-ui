@@ -30,9 +30,10 @@ class Router extends React.Component<IRouterComponentProps, {}> {
 
     const routes: JSX.Element[] = Object.keys(pathways).map((name, key) =>
           <Route
-            path={name}
+            path={"/" + name}
             key={key}
-            component={Page(sidebarRoutes[name], this.props.store)}
+            strict={true}
+            component={Page(pathways[name], this.props.store)}
           />);
 
     const app = () => <App pathways={sidebarRoutes} defaultRedirect={this.props.defaultRedirect} />;
@@ -40,8 +41,8 @@ class Router extends React.Component<IRouterComponentProps, {}> {
     return(
       <BrowserRouter>
         <Switch>
-          <Route path="/" component={app} />
           {routes}
+          <Route path="/" component={app} />
           <Route key={Object.keys(pathways).length} component={Page404}/>
           <Redirect from="/" to={this.props.defaultRedirect} />
         </Switch>

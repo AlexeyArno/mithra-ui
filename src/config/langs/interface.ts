@@ -15,4 +15,10 @@ export interface IPopularPageLanguage {
   themesHeader: string;
   themesHeaderDesc: string;
   themesAllButton: string;
+  topBar: IPopularPageTopBarLanguage;
+  goView: string;
+}
+
+export interface IPopularPageTopBarLanguage {
+  viewers: string;
 }

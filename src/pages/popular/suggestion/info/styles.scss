@@ -48,12 +48,19 @@
   font-size: 14px;
   color: $passive-accent-color;
   margin-top: 10px; 
-  height: 150px;
+  height: 100px;
 }
 
 .suggestion-form__info__bottom{
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  
+  // align-items: center;
+  flex-direction: column;
+}
+
+.suggestion-form__info__bottom>div{
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+
 }

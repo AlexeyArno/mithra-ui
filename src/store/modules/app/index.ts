@@ -9,7 +9,7 @@ export default class AppStoreModule implements IAppStoreModule {
   public rootStore: any;
 
   constructor(rootStore: any) {
-    this.leftBarState = true;
+    this.leftBarState = false;
     this.language = "English";
     this.badges = {
       Designer: "/assets/edit.svg",

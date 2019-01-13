@@ -12,6 +12,10 @@ const lang: IAppLanguage = {
     themesHeader: "Featured Areas",
     themesHeaderDesc: "Areas people watching now",
     themesAllButton: "See All Areas",
+    goView: "View",
+    topBar: {
+      viewers: "viewers on",
+    },
   },
 };
 

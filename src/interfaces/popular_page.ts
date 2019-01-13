@@ -1,6 +1,9 @@
+import {IStream} from "./common";
+
 export interface IPopularPageStoreModule {
   mainStream: IMainStream;
   themes: IPopularTheme[];
+  topSideBar: ITopSideBar;
 }
 
 export interface IChannelInfo {
@@ -24,4 +27,15 @@ export interface IPopularTheme {
   Img: string;
   Name: string;
   Url: string;
+}
+
+export interface ITopSideBar {
+  topLive: IStream[];
+  topTheme: ISideBarTopTheme;
+}
+
+interface ISideBarTopTheme {
+  streams: IStream[];
+  name: string;
+  link: string;
 }
