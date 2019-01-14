@@ -15,11 +15,11 @@ class AuthWindow extends React.Component<{ClickUp}> {
         <InputData/>
 
         <div className="auth__btns">
-          <div className="auth__btns__up" onClick={this.props.ClickUp}>
+          <div className="auth__btns__up" >
             Sign Up
           </div>
           
-          <div className="auth__btns__up">
+          <div className="auth__btns__up" onClick={this.props.ClickUp}>
             Sign In
           </div>
         </div>  
