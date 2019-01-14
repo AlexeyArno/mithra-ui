@@ -12,15 +12,14 @@ require("./main.scss");
 const store: IRootStore  = new Store();
 render(
   <main>
-     {/* <Provider store={store}>
+     <Provider store={store}>
       <Router
         pathways={ROUTES}
         store={store}
         defaultRedirect={DEFAULT_REDIRECT}
         sidebarRoutes={SIDEBAR_ROUTES}
       />
-    </Provider> */}
-    <Sign/>
+    </Provider>
   </main>
   ,
   document.getElementById("root"),

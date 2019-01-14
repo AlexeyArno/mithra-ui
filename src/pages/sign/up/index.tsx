@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import AuthWindow from "./auth.window";
 require("./style.scss")
 
-class SignUp extends React.Component<{}> {
+class SignUp extends React.Component<{ClickUp}> {
   constructor(props){
     super(props)
   }
@@ -11,7 +11,7 @@ class SignUp extends React.Component<{}> {
   render(){
     return(
       <div className="sign-up">
-        <AuthWindow/>
+        <AuthWindow ClickUp={this.props.ClickUp}/>
       </div>
     )
   }  

@@ -1,25 +1,29 @@
 .sign{
-  max-width: 2880px;
-  // position: absolute;
+  max-width: 300vw;
   height: 100vh;
   display: flex;
   flex-direction: row;
   margin:auto;
-  // opacity: 0.6;
-  // overflow: auto;
-  background-image: url("https://images.pexels.com/photos/1080854/pexels-photo-1080854.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=1500");
+  overflow: hidden;
 }
 
 .sign__window{
-  width: 100vh;
+  width: 50vw;
   height: 100vh;
-  background: rgba(255, 255, 255, 0);
+  background-position: 50%;
+  background-size:cover;
+  background-image: url("https://images.pexels.com/photos/1080854/pexels-photo-1080854.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+}
+
+.sign__window__color{
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(89, 91, 210, 0.689);
 }
 
 .sign__wrapper{
-  width: 2880px;
+  transition: 0.7s ease-in-out;
+  width: 300vw;
   display: flex;
   flex-direction: row;
-  // overflow: hidden;
-  margin:auto;
 }

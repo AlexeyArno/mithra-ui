@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import InputData from "./input.data";
 require("./style.scss");
 
-class AuthWindow extends React.Component<{}> {
+class AuthWindow extends React.Component<{ClickIn}> {
   constructor(props){
     super(props)
   }
@@ -14,7 +14,7 @@ class AuthWindow extends React.Component<{}> {
         <InputData/>
 
         <div className="auth__btns">
-          <div className="auth__btns__up">
+          <div className="auth__btns__up" onClick={this.props.ClickIn}>
             Sign In
           </div>
           
