@@ -26,7 +26,7 @@ class Sign extends React.Component<{}> {
 
   ClickUp = () => {
     this.setState({
-      galleryMargin: "10vh"
+      galleryMargin: !this.state.galleryMargin
     })
   }
 
