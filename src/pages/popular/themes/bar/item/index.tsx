@@ -1,5 +1,4 @@
 import * as React from "react";
-import { observer, inject } from "mobx-react";
 import { IPopularTheme } from "src/interfaces/popular_page";
 require("./styles.scss");
 
@@ -7,8 +6,6 @@ interface IBarItemProps {
   item: IPopularTheme;
 }
 
-@inject("store")
-@observer
 export default class BarItem extends React.Component<IBarItemProps> {
   constructor(props) {
     super(props);

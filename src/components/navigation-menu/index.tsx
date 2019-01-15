@@ -1,5 +1,4 @@
 import * as React from "react";
-import { observer, inject } from "mobx-react";
 require("./styles.scss");
 
 interface INavigationMenuProps {
@@ -11,8 +10,6 @@ interface INavigationMenuState {
   activeElement: number;
 }
 
-@inject("store")
-@observer
 export default class NavigationMenu extends React.Component<INavigationMenuProps, INavigationMenuState> {
   private firstElement: React.RefObject<HTMLDivElement>;
   private wrapper: React.RefObject<HTMLDivElement>;

@@ -1,14 +1,12 @@
 import * as React from "react";
-import { observer, inject } from "mobx-react";
 require("./styles.scss");
 const icon = require("assets/right-arrow.svg");
 
 interface IBarButtonProps {
-  click: () => void;
+  press: () => void;
+  up: () => void;
 }
 
-@inject("store")
-@observer
 export default class BarButton extends React.Component<IBarButtonProps> {
   constructor(props) {
     super(props);
@@ -18,7 +16,8 @@ export default class BarButton extends React.Component<IBarButtonProps> {
       <div
         dangerouslySetInnerHTML={{__html: icon}}
         className="bar-button"
-        onClick={this.props.click}
+        onMouseDown={this.props.press}
+        onMouseUp={this.props.up}
       />
     );
   }
