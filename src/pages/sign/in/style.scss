@@ -1,8 +1,11 @@
 .sign-in{
   // max-width: 100vw;
-  width: 50vw;
+  width:50vw;
   height: 100vh;
   display:flex;
+  flex-direction: column;
   align-items: auto;
   background-color: white;
+  overflow: hidden;
 }
+

@@ -14,7 +14,7 @@ class SignIn extends React.Component<{ClickIn}> {
   public render() {
     return(
       <div className="sign-in" >
-        <AuthWindow ClickIn={this.props.ClickIn}/>
+        <AuthWindow ClickIn={this.props.ClickIn}/>    
       </div>
     );
   }

@@ -13,15 +13,16 @@ class AuthWindow extends React.Component<{ClickIn}> {
       <div className="auth">
         <InputData/>
 
-        <div className="auth__btns">
-          <div className="auth__btns__up" >
+        {/* <div className="auth__btns"> */}
+          <div className="auth__btns__in__in" >
             Sign In
           </div>
           
-          <div className="auth__btns__up" onClick={this.props.ClickIn}>
+          
+        {/* </div>   */}
+        <div className="auth__btns__up__in" onClick={this.props.ClickIn}>
             Sign Up
           </div>
-        </div>  
       </div>
     )
   }  

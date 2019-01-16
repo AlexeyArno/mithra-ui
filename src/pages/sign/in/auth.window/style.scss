@@ -5,29 +5,29 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: white;
+  // background-color: white;
+  // position: relative;
 }
 
-.auth__btns__up{
+.auth__btns__up__in{
   font-size: 15px;
-  display: flex;
-  align-items: center;
   color: #595BD2;
   cursor: pointer;
-  margin:auto;
+  // position:absolute;
+  // bottom:5vh;
+  margin-top: 40vh;
 }
 
-.auth__btns__in{
+.auth__btns__in__in{
   font-size: 15px;
-  display: flex;
-  align-items: center;
   color: #595BD2;
   cursor: pointer;
-  margin:auto;
+  margin-top: 1vh;
 }
 
 .auth__btns{
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  // justify-content: space-between;
 }
