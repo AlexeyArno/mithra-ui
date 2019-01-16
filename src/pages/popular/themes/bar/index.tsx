@@ -35,7 +35,7 @@ export default class Bar extends React.Component<IBarProps> {
     this.leftStop = false;
     while (!this.leftStop) {
       const oldValue = this.getLeft();
-      if (oldValue === 0) {break; }
+      if (oldValue >= 0) {break; }
       this.content.current.style.left = oldValue + (speed * 5) + "px";
       speed = (speed === 9 ? speed : speed + 1);
       await this.sleep(delay);
@@ -49,9 +49,10 @@ export default class Bar extends React.Component<IBarProps> {
   public async right() {
     let speed = 1;
     this.rightStop = false;
+    const limiter = (this.content.current.offsetWidth - this.wrapper.current.offsetWidth) * -1;
     while (!this.rightStop) {
       const oldValue = this.getLeft();
-      if (oldValue <= -1440) {break; }
+      if (oldValue <= limiter) {break; }
       this.content.current.style.left = oldValue - (speed * 10) + "px";
       speed = (speed === 9 ? speed : speed + 1);
       await this.sleep(delay);
