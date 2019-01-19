@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
-import SignIn from "./in";
-import SignUp from "./up";
+import SignIn from "./in/index";
+import SignUp from "./up/index";
 require("./style.scss");
 
 
@@ -20,7 +20,7 @@ class Sign extends React.Component<{}> {
 
   ClickIn = () => {
     this.setState({
-      galleryMargin: "-100vh"
+      galleryMargin: "-50vw"
     })
   }
 
@@ -33,7 +33,7 @@ class Sign extends React.Component<{}> {
   public render() {
     return(
       <div className="sign">
-        <div className="sign__wrapper" style={{marginLeft: this.state.galleryMargin}}>
+        <div className="sign__wrapper" style={{marginLeft: this.state.galleryMargin}} >
           <SignIn ClickIn={this.ClickIn}/>
           <div className="sign__window"> <div className="sign__window__color"> </div> </div>
           <SignUp ClickUp={this.ClickUp}/>
