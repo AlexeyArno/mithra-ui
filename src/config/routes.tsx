@@ -22,6 +22,6 @@ const ROUTES: {[key: string]: JSX.Element} = {
   sign: <Sign/>,
 };
 
-const DEFAULT_REDIRECT: string = "/popular";
+const DEFAULT_REDIRECT: string = "/sign";
 
 export {SIDEBAR_ROUTES, ROUTES, DEFAULT_REDIRECT};
