@@ -14,18 +14,20 @@ function getEntrySources(sources) {
 }
 
 
+
 module.exports = {
   entry: getEntrySources(['./src/index.tsx']),
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+   
   },
   cache:true,
   resolve: {
     extensions: ['.js', '.json', '.ts', '.tsx'],
     alias:{
       src: path.resolve('./src'),
-      assets:  path.resolve('./assets')
+      assets:  path.resolve('./dist/assets')
     }
   },
   module: {
@@ -51,7 +53,7 @@ module.exports = {
     {
       test: /\.svg$/,
       loader: 'svg-inline-loader'
-  },
+    },
     {
       test: /\.scss$/,
       use: [
@@ -67,7 +69,29 @@ module.exports = {
           }
         }
       ]
-   } 
+    },{
+      test: /\.(png|jpe?g)$/,
+      use: [
+        'file-loader',
+        {
+          loader: 'image-webpack-loader',
+          options: {
+            bypassOnDebug:true,
+            mozjpeg: {
+              progressive: true,
+              quality: 65
+            },
+            pngquant: {
+              quality: '65-90',
+              speed: 4
+            },
+          }
+        },
+      ]
+    },{
+      test: /\.otf$/,
+      loader: 'url-loader?limit=100000'
+    }
   ]
   },
   plugins: [
@@ -79,6 +103,7 @@ module.exports = {
   devServer: {
     port: 8080,
     contentBase: (__dirname, './dist'),
+    historyApiFallback: true,
     compress: true
   }
 };

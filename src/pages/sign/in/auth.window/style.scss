@@ -1,0 +1,33 @@
+.auth{
+  width: 260px;
+  height: 450px;
+  margin:auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // background-color: white;
+  // position: relative;
+}
+
+.auth__btns__up__in{
+  font-size: 15px;
+  color: #595BD2;
+  cursor: pointer;
+  // position:absolute;
+  // bottom:5vh;
+  margin-top: 40vh;
+}
+
+.auth__btns__in__in{
+  font-size: 15px;
+  color: #595BD2;
+  cursor: pointer;
+  margin-top: 1vh;
+}
+
+.auth__btns{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  // justify-content: space-between;
+}

@@ -1,0 +1,33 @@
+.subscribe,
+.unsubscribe{
+  width: 28px;
+  height: 28px;
+  background: $passive-color; 
+  cursor: pointer;
+  // padding: 5px;
+}
+
+.subscribe__wrapper,
+.unsubscribe__wrapper{
+  margin: 5px;
+}
+
+.subscribe__wrapper>svg>path{
+  fill: lighten($primary-color, 20%) !important;
+}
+
+.unsubscribe__wrapper>svg>path{
+  fill: lighten($passive-accent-color, 20%) !important;
+}
+
+.unsubscribe:hover{
+  .unsubscribe__wrapper>svg>path{
+    fill: $passive-accent-color !important;
+  }
+}
+
+.subscribe:hover{
+  .subscribe__wrapper>svg>path{
+    fill: $primary-color !important;
+  }
+}

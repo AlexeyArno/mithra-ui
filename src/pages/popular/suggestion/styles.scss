@@ -1,0 +1,25 @@
+.suggestion-form{
+  // width: 800px;
+  height: 350px;
+  min-height: 350px;
+  background: $passive-color;
+  margin: 15px;
+  display: inline-block;
+  display: flex;
+  max-height: 400px;
+}
+
+.suggestion-form__player{
+  
+  width: calc(100% - 250px);
+  position: relative;
+  height: 100%;
+}
+
+
+
+// .suggestion-form__player::before{
+//   display: block; /* отображать элемент как блок */
+//   content: ""; /* содержимое псевдоэлемента */
+//   width: 100%;
+// }

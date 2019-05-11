@@ -1,0 +1,18 @@
+.popular__themes__bar__content{
+  display: flex;
+  position: relative;
+  left: 0px;
+}
+
+.popular__themes__bar{
+  display: flex;
+  overflow: hidden;
+}
+
+.popular__themes__wrapper{
+  display: flex;
+}
+
+.popular__themes__left-button{
+  transform: scale(-1, 1);
+}
